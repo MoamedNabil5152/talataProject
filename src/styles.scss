@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  overflow-x: hidden;
+}
+ .parent {
+  p-table {
+    padding: 0;
+  }
+  .p-datatable .p-datatable-thead > tr > th {
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .p-datatable .p-datatable-tbody > tr > td {
+    text-align: left;
+    border: 1px solid #e9ecef;
+    border-width: 0 0 1px 0;
+    padding: 0.3rem 1rem;
+    font-size: 13px;
+}
+  .p-inputtext {
+    margin: 0;
+    width: 235px;
+    border-radius: 7px;
+    width: 100%;
+  }
+  [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    padding: 7px 31px;
+    font-weight: 500;
+}
+.bordered-table {
+  border: 1px solid #f4f2f2;
+}
+.head {
+  color: #a1a5b7;
+  font-weight: 500;
+}
+}

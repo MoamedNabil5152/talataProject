@@ -1,0 +1,30 @@
+<div class="row parent">
+  <ng-container [formGroup]="relocateForm">
+    <div class="col-md-6">
+      <small class="head">Depatments</small>
+      <p-dropdown
+        [options]="DepartmentList$ | async"
+        optionValue="label"
+        appendTo="body"
+        formControlName="department"
+        placeholder="Select a Department"
+      ></p-dropdown>
+    </div>
+    <!--  -->
+    <div class="col-md-6">
+      <small class="head">Description</small>
+
+      <input
+        type="text"
+        pInputText
+        placeholder="Description"
+        formControlName="description"
+      />
+    </div>
+    <!--  -->
+  </ng-container>
+</div>
+<!--  -->
+<div class="d-flex d-flex justify-content-end align-items-center mt-3">
+  <button class="btn btn-primary" (click)="onChangeDepartment()">Confirm</button>
+</div>
