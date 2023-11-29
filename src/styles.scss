@@ -1,28 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   overflow-x: hidden;
+
+}
+
+* {
+  hr {
+    margin: 0.3rem 0 !important;
+    color: inherit;
+    border: 0;
+    border-top: var(--bs-border-width) solid;
+    opacity: .25;
+  }
 }
  .parent {
   p-table {
     padding: 0;
   }
+
+
+  .pointer {
+    cursor: pointer;
+  }
+  .p-password {
+    position: relative;
+    display: inline-flex;
+    width: 100% !important;
+    min-width: 100% !important;
+  }
   .p-datatable .p-datatable-thead > tr > th {
     background-color: #fff;
     font-weight: 500;
     font-size: 14px;
+    text-align: center;
+
   }
   .p-datatable .p-datatable-tbody > tr > td {
-    text-align: left;
+    text-align: center;
     border: 1px solid #e9ecef;
     border-width: 0 0 1px 0;
     padding: 0.3rem 1rem;
     font-size: 13px;
 }
+
+.p-input-icon-right > .p-inputtext {
+  padding-right: 2rem;
+  width: 100% !important;
+}
   .p-inputtext {
     margin: 0;
     width: 235px;
     border-radius: 7px;
-    width: 100%;
+    width: 100% !important;
   }
   [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
     cursor: pointer;
@@ -37,3 +66,4 @@ body {
   font-weight: 500;
 }
 }
+

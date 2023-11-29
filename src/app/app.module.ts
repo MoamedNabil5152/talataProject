@@ -4,19 +4,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
-import { EmployeesComponent } from './employees/employees/employees.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared/shared.module';
-import { RelocateEmployeePopupComponent } from './employees/relocate-employee-popup/relocate-employee-popup.component';
 import { DialogService } from 'primeng/dynamicdialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { UsersComponent } from './users/users/users.component';
+import { HomeComponent } from './home/home.component';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { ConfirmationMessageComponent } from './shared/shared/confirmation-message/confirmation-message.component';
+import { AddEditViewUserPopupComponent } from './users/addEditViewUserPopup/addEditViewUser-popup.component';
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeesComponent,
-    RelocateEmployeePopupComponent,
+    UsersComponent,
+    AddEditViewUserPopupComponent,
+    HomeComponent,
+    ConfirmationMessageComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,10 +37,16 @@ import { ToastrModule, ToastrService } from 'ngx-toastr';
     FormsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(), // ToastrModule added here
-
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
 
-  providers: [DialogService  ],
-  bootstrap: [AppComponent]
+  providers: [DialogService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

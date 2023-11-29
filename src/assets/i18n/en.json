@@ -1,0 +1,34 @@
+{
+  "menu.login": "Login",
+  "sidebar.users": "Users",
+  "logout": "Logout",
+  "language": "عربي",
+  "wide" : "WideBot",
+  "filter" : "Filter",
+  "email" : "Filter With Email",
+  "filterName" : "Filter With Name",
+  "AddNewUser" : "Add New User",
+  "viewasuser" : "View As",
+  "auser" : "User",
+  "admin" : "Admin",
+  "name" : "Name",
+  "mail" : "Email",
+  "phone" : "Phone",
+  "website" : "Website",
+  "actions" : "Actions",
+  "userInfo" : "User Informations",
+  "username" : "Username",
+  "street" : "Street",
+  "companyName" : "Company Name",
+  "submit" : "Submit",
+  "isRequired" : "is required",
+  "Invalid" : "Invalid email format.",
+  "delete" : "Are You Sure Want to Delete This User ?",
+  "editUser" : "Edit User",
+  "viewUser" : "View User"
+
+
+
+
+
+}
