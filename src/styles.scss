@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
 body {
   overflow-x: hidden;
-
+background-color: #FDFDFD;
+overflow-x: hidden;
 }
 
 * {
@@ -11,7 +13,9 @@ body {
     border: 0;
     border-top: var(--bs-border-width) solid;
     opacity: .25;
+
   }
+
 }
  .parent {
   p-table {
@@ -67,3 +71,25 @@ body {
 }
 }
 
+/* For Webkit browsers (Chrome, Safari, newer versions of Opera) */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4E328A; /* Color of the scrollbar handle */
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5f4499; /* Color of the scrollbar handle when hovered */
+  border-radius: 5px;
+
+}

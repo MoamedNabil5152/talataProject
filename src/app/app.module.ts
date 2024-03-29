@@ -9,12 +9,9 @@ import { SharedModule } from './shared/shared/shared.module';
 import { DialogService } from 'primeng/dynamicdialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
-import { UsersComponent } from './users/users/users.component';
-import { HomeComponent } from './home/home.component';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { ConfirmationMessageComponent } from './shared/shared/confirmation-message/confirmation-message.component';
-import { AddEditViewUserPopupComponent } from './users/addEditViewUserPopup/addEditViewUser-popup.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -22,9 +19,6 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent,
-    AddEditViewUserPopupComponent,
-    HomeComponent,
     ConfirmationMessageComponent,
   ],
   imports: [
