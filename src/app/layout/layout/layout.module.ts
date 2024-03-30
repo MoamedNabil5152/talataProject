@@ -10,6 +10,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { Routing } from '../../routing';
 import { UsersModule } from 'src/app/pages/users/users.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MainComponent } from './components/main/main.component';
 const routes: Routes = [
   {
     path: '',
@@ -19,7 +20,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [NavBarComponent, SideMenuComponent, LayoutComponent],
+  declarations: [NavBarComponent, SideMenuComponent, LayoutComponent , MainComponent],
   imports: [
     CommonModule,
     // LayoutRoutingModule,
