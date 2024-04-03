@@ -5,11 +5,17 @@ import { UsersRoutingModule } from './users-routing.module';
 import { SharedModule } from 'src/app/shared/shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UsersComponent } from './users/users.component';
+import { MainComponent } from '../main/main.component';
+import { ConditionsComponent } from '../conditions/conditions.component';
+import { PolicyComponent } from '../policy/policy.component';
 
 
 @NgModule({
   declarations: [
-    UsersComponent
+    UsersComponent,
+    MainComponent,
+    PolicyComponent,
+    ConditionsComponent,
   ],
   imports: [
     CommonModule,

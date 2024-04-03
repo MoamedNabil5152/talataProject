@@ -2,12 +2,29 @@ p {
   margin: 0;
 }
 
+.benCont {
+  margin-top: 120px;
+}
+
 .mainContainer {
   overflow: hidden;
   padding: 0;
   margin: 0;
 }
 
+.footerText2 {
+  font-weight: 500;
+  font-size: 15px;
+  color: #fcfcfc;
+  font-family: "Almarai", sans-serif;
+  margin-bottom: 17px;
+  text-decoration: none !important;
+  // display: block !important;
+}
+
+.formMainTexts {
+  width: 410px;
+}
 .sidebar {
   height: 100%;
   position: fixed;
@@ -140,14 +157,15 @@ p {
 }
 .centered {
   position: absolute;
-  top: 193px;
-  left: 174px;
-  width: 1311px;
+  top: 40%;
+  left: 40%;
+  transform: translate(-40%, -40%);
+  width: 75%;
   height: 260x;
   bottom: 32px;
   color: #fcfcfc;
   font-family: "Almarai", sans-serif;
-  font-size: 96px;
+  font-size: 96px !important;
   text-align: center;
 }
 .centered2 {
@@ -189,6 +207,7 @@ p {
   font-family: "Almarai", sans-serif;
   z-index: 222;
   cursor: pointer;
+  margin-bottom: 32px;
 }
 .sendButton:hover {
   background-color: #b41936 !important  ;
@@ -197,7 +216,6 @@ p {
   width: 174px;
   height: 65px;
   border-radius: 16px;
-  margin: 0 10px;
   border: 3px solid #fd385d;
   font-family: "Almarai", sans-serif;
   font-size: 15px;
@@ -301,7 +319,7 @@ p {
   width: 350px;
 }
 .advText {
-  color: #665a73;
+  color: #4e425c;
   font-weight: 400;
   font-size: 34px;
   font-family: "Almarai", sans-serif;
@@ -396,6 +414,7 @@ p {
   font-weight: 400;
   font-size: 17px;
   color: #4e425c;
+  font-family: "Almarai", sans-serif;
 }
 .areas {
   height: 531px;
@@ -403,7 +422,7 @@ p {
   width: 100%;
 }
 .contact {
-  margin: 120px 0px 0px 0px;
+  margin-top: 120px;
   text-align: center;
 }
 .contactText {
@@ -421,6 +440,7 @@ p {
   width: 100%;
   margin-top: 55px;
   text-align: center;
+  height: auto !important;
 }
 .shipmentImg {
   margin: 0 94px;
@@ -428,14 +448,17 @@ p {
 .footer {
   width: 100%;
   margin-top: 229px;
-  height: auto;
-  position: relative;
+  // height: auto;
+  // position: relative;
+  background: url("/assets/images/Rectangl.png");
+  height: 330px;
 }
 .footerImg {
-  margin: 0;
-  width: 100%;
-  height: 504px;
-  position: relative;
+  margin-top: 37px;
+  height: 115px;
+}
+.footContainer {
+  margin-top: 120px;
 }
 .serviceP {
   font-family: "Almarai", sans-serif;
@@ -474,9 +497,7 @@ p {
 .contactDiv {
   background-color: #fcfcfc;
   border-radius: 16px;
-  padding: 16px 13px;
-  margin: 0 16px;
-  width: 33%;
+  padding: 0px 13px;
   height: 72px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
   cursor: pointer;
@@ -506,9 +527,6 @@ p {
   color: #726581;
 }
 .parent {
-  width: 331px;
-  //  height: 441px;
-  margin: 0 32px;
   margin-bottom: 75px;
 }
 .sendText {
@@ -528,9 +546,7 @@ p {
   box-shadow: 0px 11px 0px #fd385d; /* Adjust values as needed */
 }
 .sendCont {
-  width: 364px;
-  margin-right: 24px;
-  margin-left: 32px;
+  padding: 0 10px;
   flex-wrap: wrap;
 }
 .headersSent {
@@ -577,12 +593,13 @@ textarea {
   // margin-left: 120px;
   // margin-right: 120px;
   position: absolute;
-  top: 44;
+  top: 44px !important;
   left: 120;
   right: 120;
   bottom: 0;
   padding: 20px;
   color: white; /* Example text color */
+  width: 100%;
 }
 .footerText {
   font-weight: 700;
@@ -590,12 +607,15 @@ textarea {
   color: #fcfcfc;
   font-family: "Almarai", sans-serif;
   margin-bottom: 17px;
+  text-decoration: none;
+  // display: block !important;
 }
 .footerRights {
   font-size: 15px;
   font-weight: 400;
   font-family: "Almarai", sans-serif;
   color: #fdc9d5;
+  direction: ltr;
 }
 .talataCont {
   height: 407px;
@@ -670,6 +690,9 @@ textarea {
     height: auto; /* Change height to auto for smaller screens */
   }
 
+  .formMainTexts {
+    width: 100% !important;
+  }
   .content {
     margin-left: 250px; /* Adjust based on your sidebar width */
   }
@@ -707,9 +730,10 @@ textarea {
 
   .centered {
     position: absolute;
-    top: 193px;
-    left: 0px !important;
-    width: 1311px;
+    top: 40%;
+    left: 40%;
+    transform: translate(-40%, -40%);
+    width: 75%;
     height: 260x;
     bottom: 32px;
     color: #fcfcfc;
@@ -720,14 +744,15 @@ textarea {
 
   .centered2 {
     position: absolute;
-    top: 404px;
-    left: 0px;
-    width: 1311px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-weight: 400;
     height: 38px;
     color: #e0dee3;
     font-family: "Almarai", sans-serif;
     font-size: 22px;
+    padding: 0 27px;
     text-align: center;
   }
 
@@ -761,7 +786,7 @@ textarea {
     margin: 0;
     margin-bottom: 15px;
     // height: 441px;
-    display: block !important;
+    // display: block !important;
   }
 
   .whyUs {
@@ -794,9 +819,7 @@ textarea {
   }
 
   .parent {
-    margin-bottom: 20px !important;
-    width: 331px;
-    margin: 0 45px;
+    margin-bottom: 40px !important;
   }
 
   .benefitImg {
@@ -806,7 +829,8 @@ textarea {
   }
 
   .advText {
-    font-size: 18px;
+    font-size: 25px;
+    color: #4e425c;
   }
 
   .secondBen {
@@ -814,7 +838,7 @@ textarea {
   }
 
   .main {
-    height: 713px !important;
+    height: 814px !important;
   }
 
   .benefitCont2 {
@@ -822,27 +846,30 @@ textarea {
     margin-bottom: 25px;
   }
   .centeredAboutCompany2 {
-    transform: translateX(-50%);
-    height: 225px;
+    position: absolute;
+    top: 346px;
+    text-align: center !important;
+
+    height: auto;
     color: #fcfcfc;
     font-family: "Almarai", sans-serif;
     font-size: 17px;
     font-weight: 400;
-    padding: 0px 166px;
-    margin-bottom: 10px;
+    transform: translate(-50%, -50%) !important;
+    width: 311px;
   }
   .centeredAbout {
     position: absolute;
-    top: 465px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 712px;
+    top: calc(346px + 225px + 20px);
+    text-align: center !important;
+
     height: 225px;
     color: #fcfcfc;
     font-family: "Almarai", sans-serif;
     font-size: 17px;
     font-weight: 400;
-    padding: 0 156px;
+    transform: translate(-50%, -50%) !important;
+    width: 311px;
   }
 
   .abouts {
@@ -916,19 +943,16 @@ textarea {
   }
 
   .contact {
-    display: block !important;
     white-space: pre-wrap;
     overflow-wrap: break-word;
-    margin: 20px 5px;
+
     text-align: center;
   }
 
   .contactDiv {
     background-color: #fcfcfc;
     border-radius: 16px;
-    padding: 18px 29px;
-    margin: 0 2px;
-    width: 398px;
+    padding: 0px 13px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     white-space: pre-wrap;
@@ -995,35 +1019,34 @@ textarea {
   }
 
   .cont {
-    position: absolute;
-    top: 15;
-    left: 120;
-    right: 120;
+    // position: absolute;
+    // top: 15;
+    // left: 120;
+    // right: 120;
+    // bottom: 0;
+    // padding: 20px;
+    // color: white;
+    position: absolute !important;
+    top: 15px;
+
     bottom: 0;
-    padding: 20px;
-    color: white;
+    color: #fff;
+    width: 100%;
   }
   .foot {
     position: absolute;
-    top: 105;
-    padding: 0px;
+    top: 105px !important;
     bottom: 0;
-    color: white;
-    padding: 0 10px;
-
-    height: 246px;
-  }
-  .footerText2 {
-    font-weight: 500;
-    font-size: 15px;
-    color: #fcfcfc;
-    font-family: "Almarai", sans-serif;
-    margin-bottom: 17px;
+    color: #fff;
+    padding: 0 10 !important;
+    padding: 10px !important;
+    left: 11px !important;
+    right: 11px !important;
   }
 
-  .footerImg {
-    height: 564px;
-  }
+  // .footerImg {
+  //   height: 700px !important;
+  // }
 
   .sendCont {
     margin-left: 0;
@@ -1088,9 +1111,7 @@ textarea {
     height: 761px;
   }
   .footer {
-    width: 100%;
-    margin-top: 70px;
-    position: relative;
+    height: 653px  !important;
   }
 
   .sendText {
@@ -1108,11 +1129,31 @@ textarea {
     font-family: "Almarai", sans-serif;
   }
 
+  .sendButtonBen {
+    background-color: #fd385d;
+    font-weight: 800;
+    font-size: 15px;
+    text-align: center;
+    color: #fcfcfc;
+    border-radius: 16px;
+    border: #fd385d;
+    height: 65px;
+    width: 181px;
+    margin: 0 10px;
+    font-family: "Almarai", sans-serif;
+    z-index: 222;
+    cursor: pointer;
+    margin-bottom: 32px;
+  }
+  .sendButtonBen:hover {
+    background-color: #b41936 !important  ;
+  }
+
   .centered2 {
     position: absolute;
-    top: 404px;
-    left: 0px;
-    width: 1311px;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-weight: 400;
     height: 38px;
     color: #e0dee3;
@@ -1122,8 +1163,17 @@ textarea {
     text-align: center;
   }
 
-  .contactForMob{
+  .contactForMob {
     display: block !important;
+  }
+
+  .connectButtonCont,
+  .sendButtonCont {
+    margin-bottom: 32px;
+  }
+
+  .parentOfTexts {
+    width: auto !important;
   }
 }
 
@@ -1132,7 +1182,7 @@ textarea {
   .footer {
     /* Styles specific to iPad screens */
     /* For example: */
-    height: 1242px;
+    height: 1205px;
   }
 
   .benefitCont {
@@ -1156,7 +1206,6 @@ textarea {
   }
 
   .contact {
-    margin: 114px !important;
     text-align: center;
   }
 
@@ -1172,18 +1221,18 @@ textarea {
     box-shadow: 0px 11px 0px #fd385d;
   }
 
-  .centered {
-    position: absolute;
-    top: 193px;
-    left: 0 !important;
-    width: 906px !important;
-    height: 260x;
-    bottom: 32px;
-    color: #fcfcfc;
-    font-family: "Almarai", sans-serif;
-    font-size: 73px;
-    text-align: center;
-  }
+  // .centered {
+  //   position: absolute;
+  //   top: 193px;
+  //   left: 0 !important;
+  //   width: 906px !important;
+  //   height: 260x;
+  //   bottom: 32px;
+  //   color: #fcfcfc;
+  //   font-family: "Almarai", sans-serif;
+  //   font-size: 73px;
+  //   text-align: center;
+  // }
 
   .centered2 {
     position: absolute;
@@ -1196,5 +1245,84 @@ textarea {
     font-family: "Almarai", sans-serif;
     font-size: 24px;
     text-align: center;
+  }
+}
+
+.talataLogoWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+// .talataCont2Wrapper {
+//   display: flex !important;
+//   justify-content: center !important;
+//   position: absolute !important;
+//   top: 29px !important;
+//   text-align: center !important;
+//   justify-content: center !important;
+//   width: 100% !important;
+// }
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .centered {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-40%, -40%);
+    width: 75%;
+    height: 260x;
+    bottom: 32px;
+    color: #fcfcfc;
+    font-family: "Almarai", sans-serif;
+    font-size: 73px !important;
+    text-align: center;
+  }
+  .centered2 {
+    position: absolute;
+    top: calc(40% + 190px);
+    left: 194px !important;
+    width: 75%;
+    font-weight: 400;
+    height: 38px; /* corrected typo: should be 'px' not 'x' */
+    color: #e0dee3;
+    font-family: "Almarai", sans-serif;
+    font-size: 34px;
+    text-align: center;
+  }
+  .centered3 {
+    position: absolute;
+    top: calc(80% + 32px);
+    left: 0;
+    width: 100%;
+    color: #e0dee3;
+    font-family: "Almarai", sans-serif;
+    font-size: 34px;
+    text-align: center;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+  }
+
+  .items {
+    color: #726581;
+    font-weight: 700;
+    font-size: 12px !important;
+    margin-right: 8px !important;
+    font-family: "Almarai", sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  input,
+  textArea {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #fdc9d5;
+    padding: 10px;
+    margin: 10px;
+    text-align: end;
+  }
+  .sendCont {
+    width: auto;
   }
 }

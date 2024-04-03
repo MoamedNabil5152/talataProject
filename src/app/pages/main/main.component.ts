@@ -6,52 +6,52 @@ declare var AOS: any;
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements AfterViewInit {
-
-  smallScreen : boolean =false ;
+  smallScreen: boolean = false;
   showDiv: boolean = false;
 
-  showVictor : boolean = false
-  showLine : boolean = false
-  showHead : boolean = false
+  showVictor: boolean = false;
+  showLine: boolean = false;
+  showHead: boolean = false;
 
   activeItem: string | null = 'الرئيسية';
   currentLang: string;
-  align : any = ''
+  align: any = '';
   direction: 'ltr' | 'rtl' = 'ltr'; // Default direction is left to right
 
-
-  shipmentForm : FormGroup = new FormGroup({
+  shipmentForm: FormGroup = new FormGroup({
     shipmentData: this.fb.group({
       description: [''],
       optionalWeight: [''],
       optionalDimensions: [''],
-      notes: ['']
+      notes: [''],
     }),
     recipientData: this.fb.group({
       fullName: [''],
       mobileNumber: [''],
       optionalEmail: [''],
-      deliveryAddress: ['']
+      deliveryAddress: [''],
     }),
     senderData: this.fb.group({
       fullName: [''],
       mobileNumber: [''],
       optionalEmail: [''],
-      deliveryAddress: ['']
-    })
-  })
+      deliveryAddress: [''],
+    }),
+  });
 
-  constructor(private translate: TranslateService , private fb : FormBuilder  ) {
+  constructor(private translate: TranslateService, private fb: FormBuilder) {
     translate.setDefaultLang('ar');
     this.currentLang = localStorage.getItem('lang') || 'ar';
     translate.use(this.currentLang);
-    this.currentLang == 'en' ? this.direction = 'ltr' : this.direction = 'rtl';
+    this.currentLang == 'en'
+      ? (this.direction = 'ltr')
+      : (this.direction = 'rtl');
   }
 
-   toggleDiv() {
+  toggleDiv() {
     this.showDiv = !this.showDiv;
   }
 
@@ -69,6 +69,10 @@ export class MainComponent implements AfterViewInit {
         element.classList.add('itemsActive');
       }
     });
+  }
+
+  onScroll(text: string, yOffset?: any) {
+
   }
   ngAfterViewInit(): void {
     AOS.init();
@@ -111,6 +115,6 @@ export class MainComponent implements AfterViewInit {
   }
 
   onSaveShipment() {
-    console.log(this.shipmentForm.value)
+    console.log(this.shipmentForm.value);
   }
 }

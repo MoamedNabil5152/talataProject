@@ -1,0 +1,1065 @@
+<ng-container>
+  <div *ngIf="smallScreen">
+    <div class="navbar d-flex justify-content-between align-items-center">
+      <img
+        src="assets/images/talata-logo-horizontal.png"
+        alt=""
+        class="talat"
+      />
+      <div class="d-flex gap-5 align-items-center">
+        <div
+          class="d-flex justify-content-center align-items-center trans"
+          (click)="switchLanguage()"
+        >
+          {{ currentLang == "en" ? "EN" : "ع" }}
+        </div>
+
+        <i
+          class="pi pi-align-justify"
+          (click)="toggleDiv()"
+          *ngIf="!showDiv"
+        ></i>
+        <i class="pi pi-times" (click)="toggleDiv()" *ngIf="showDiv"></i>
+      </div>
+    </div>
+
+    <div
+      class="d-flex justify-content-center align-items-center menu"
+      *ngIf="showDiv"
+    >
+      <div class="myDiv">
+        <div>
+          <a
+            class="itemsMob"
+            id="sends"
+            (click)="change('sends')"
+            href="#sendShipment"
+            style="width: auto"
+            >{{ "SendShipment" | translate }}</a
+          >
+        </div>
+        <hr />
+        <div>
+          <a
+            class="itemsMob"
+            id="contacts"
+            (click)="change('contacts')"
+            href="#contact"
+            style="width: auto"
+            >{{ "contact" | translate }}</a
+          >
+        </div>
+        <hr />
+        <div>
+          <a
+            class="itemsMob"
+            id="area"
+            (click)="change('area')"
+            href="#areas"
+            style="width: auto"
+            >{{ "places" | translate }}</a
+          >
+        </div>
+        <hr />
+
+        <div>
+          <a
+            class="itemsMob"
+            id="goal"
+            (click)="change('goal')"
+            href="#goals"
+            style="width: auto"
+            >{{ "goals" | translate }}</a
+          >
+        </div>
+        <hr />
+
+        <div>
+          <a
+            class="itemsMob"
+            id="about"
+            (click)="change('about')"
+            href="#aboutCompany"
+            style="width: auto"
+          >
+            {{ "aboutUs" | translate }}</a
+          >
+        </div>
+        <hr />
+
+        <div>
+          <a
+            class="itemsMob"
+            id="adv"
+            (click)="change('adv')"
+            href="#advantages"
+            style="width: auto"
+            >{{ "Benefits" | translate }}</a
+          >
+        </div>
+
+        <hr />
+
+        <div>
+          <a
+            class="itemsMob"
+            id="choice"
+            (click)="change('choice')"
+            href="#us"
+            style="width: auto"
+            >{{ "whyTalata" | translate }}</a
+          >
+        </div>
+        <hr />
+
+        <div>
+          <a
+            class="itemsMob itemsActive"
+            id="main"
+            (click)="change('main')"
+            href="#global"
+            style="width: auto"
+            >{{ "main" | translate }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<!--  -->
+<div
+  class="infoCont row"
+  id="global"
+  data-aos="fade-up"
+  data-aos-duration="1000"
+>
+  <img src="assets/images/Hero bg.png" class="imgCont" alt="" />
+  <img src="assets/images/Group.png" alt="Image 2" class="top-image" />
+
+  <div class="centered">{{ "charge" | translate }}</div>
+  <div class="centered2">
+    {{ "partner" | translate }}
+  </div>
+  <div class="centered3 gap-2 d-none d-sm-none d-lg-flex">
+    <div class="connectButtonCont">
+      <button class="connectButton" (click)="onScroll('contact', -200)">
+        {{ "contact" | translate }}
+      </button>
+    </div>
+    <div class="">
+      <button class="sendButton" (click)="onScroll('sendShipment')">
+        {{ "SendShipment" | translate }}
+      </button>
+    </div>
+  </div>
+  <div class="centered3 gap-2 d-block d-sm-none">
+    <div class="sendButtonCont">
+      <button class="sendButton" (click)="onScroll('sendShipment')">
+        {{ "SendShipment" | translate }}
+      </button>
+    </div>
+    <div class="">
+      <button class="connectButton" (click)="onScroll('contact', 120)">
+        {{ "contact" | translate }}
+      </button>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div class="whyUs" data-aos="fade-up" data-aos-duration="1000">
+  <p class="usHeader" id="us">{{ "whyTalata" | translate }}</p>
+  <div class="usImgsContainer row justify-content-center">
+    <div class="col-12 row justify-content-center" style="width: 90%;">
+      <div class="parent col-md-4 justify-content-center">
+        <img src="assets/images/flexable.png" alt="" class="globalStyles" />
+        <div style="width: 94%">
+          <p class="usTexts">{{ "solveProblem" | translate }}</p>
+          
+          <p
+            class="usSubTexts"
+            [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+          >
+            {{ "solveProblemInfo" | translate }}
+          </p>
+        </div>
+      </div>
+      <div class="parent col-md-4 justify-content-center">
+        <img src="assets/images/quality.png" alt="" class="globalStyles" />
+
+        <div style="width: 94%">
+          <p class="usTexts">{{ "quality" | translate }}</p>
+          <p
+            class="usSubTexts"
+            [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+          >
+            {{ "safe" | translate }}
+          </p>
+        </div>
+      </div>
+      <div class="parent col-md-4 justify-content-center">
+        <img src="assets/images/expert (1).png" alt="" class="globalStyles" />
+        <div style="width: 94%">
+          <p class="usTexts">{{ "expertTeam" | translate }}</p>
+          <p
+            class="usSubTexts"
+            [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+          >
+            {{ "expertInfo" | translate }}
+          </p>
+        </div>
+      </div>
+      <div class="parent col-md-4 justify-content-center">
+        <img src="assets/images/support.png" alt="" class="globalStyles" />
+        <div style="width: 94%">
+          <p class="usTexts">{{ "customerService" | translate }}</p>
+          <p
+            class="usSubTexts"
+            [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+          >
+            {{ "customerServiceInfo" | translate }}
+          </p>
+        </div>
+      </div>
+      <div class="parent col-md-4 justify-content-center">
+        <img src="assets/images/fast.png" alt="" class="globalStyles" />
+        <div style="width: 94%">
+          <p class="usTexts">{{ "speed" | translate }}</p>
+          <p
+            class="usSubTexts"
+            [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+          >
+            {{ "speedInfo" | translate }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--  -->
+<div
+  class="benifits"
+  id="advantages"
+  data-aos="fade-up"
+  data-aos-duration="1000"
+>
+  <p class="benefitP">{{ "Benefits" | translate }}</p>
+  <div class="row justify-content-center align-items-center benCont">
+    <div class="col-md-6">
+      <img src="assets/images/suppluchain.png" class="img-fluid" alt="" />
+    </div>
+
+    <div class="col-md-6">
+      <div class="formMainTexts">
+        <p class="advText">{{ "stream" | translate }}</p>
+        <p class="secondAdvText" [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }">
+          {{ "streamInfo" | translate }}
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-6 d-flex justify-content-center" *ngIf="!smallScreen">
+      <div style="width: 80%">
+        <!-- Adjust width as needed -->
+        <p class="advText">{{ "gift" | translate }}</p>
+        <div class="secbenCont d-flex justify-content-center">
+          <p class="secondAdvText" [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }">
+            {{ "giftInfo" | translate }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <img
+        src="assets/images/Gemini_Generated_Image-removebg-preview 1.png"
+        class="img-fluid"
+        alt=""
+      />
+    </div>
+    <div class="col-md-6 d-flex justify-content-center" *ngIf="smallScreen">
+      <div style="width: 80%">
+        <!-- Adjust width as needed -->
+        <p class="advText">{{ "gift" | translate }}</p>
+        <div class="secbenCont d-flex justify-content-center">
+          <p class="secondAdvText" [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }">
+            {{ "giftInfo" | translate }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="d-flex justify-content-center benefitCont2 gap-2"
+    *ngIf="smallScreen"
+  >
+    <button class="sendButtonBen" (click)="onScroll('sendShipment')">
+      {{ "SendShipment" | translate }}
+    </button>
+    <button class="connectButtonSpecial" (click)="onScroll('contact')">
+      {{ "contact" | translate }}
+    </button>
+  </div>
+</div>
+<!--  -->
+<div
+  class="aboutCompany"
+  id="aboutCompany"
+  data-aos="fade-up"
+  data-aos-duration="1000"
+>
+  <img src="assets/images/about.png" class="w-100 main" alt="" />
+  <p class="centeredAboutCompany">{{ "aboutUs" | translate }}</p>
+
+  <div style="width: 712px; margin-top: 40px abouts">
+    <div class="my-3">
+      <p
+        class="centeredAboutCompany2"
+        [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+      >
+        {{ "aboutUsFirst" | translate }}
+      </p>
+    </div>
+    <div class="my-3">
+      <p
+        class="centeredAbout"
+        [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+      >
+        {{ "aboutUsSecond" | translate }}
+      </p>
+    </div>
+  </div>
+</div>
+<!--  -->
+<div class="ourGorls">
+  <p class="gloadP" id="goals">{{ "goals" | translate }}</p>
+  <div
+    class="goalsContainer row justify-content-end"
+    data-aos="fade-up"
+    data-aos-duration="1000"
+  >
+    <div
+      class="col-md-6 gloalsTexts"
+      style="height: 57px; text-align: right; margin-bottom: 73px"
+      [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+    >
+      <div class="d-flex align-items-center gap-2 justify-content-end">
+        <p class="goalsItems">{{ "qualityFirstHead" | translate }}</p>
+        <img class="vector" src="assets/images/Vector (1).png" alt="" />
+      </div>
+      <div>
+        <p class="goalsTexts">{{ "qualityFirst" | translate }}</p>
+      </div>
+    </div>
+    <!--  -->
+    <div
+      class="col-md-6 gloalsTexts"
+      style="height: 57px; text-align: right; margin-bottom: 73px"
+      [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+    >
+      <div class="d-flex align-items-center gap-2 justify-content-end">
+        <p class="goalsItems">{{ "growHead" | translate }}</p>
+        <img class="vector" src="assets/images/Vector (1).png" alt="" />
+      </div>
+      <div>
+        <p class="goalsTexts">
+          {{ "grow" | translate }}
+        </p>
+      </div>
+    </div>
+    <!--  -->
+    <div
+      class="col-md-6 gloalsTexts"
+      style="height: 57px; text-align: right; margin-bottom: 73px"
+      [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+    >
+      <div class="d-flex align-items-center gap-2 justify-content-end">
+        <p class="goalsItems">{{ "adaptHead" | translate }}</p>
+        <img class="vector" src="assets/images/Vector (1).png" alt="" />
+      </div>
+      <div>
+        <p class="goalsTexts">{{ "growTogether" | translate }}</p>
+      </div>
+    </div>
+    <!--  -->
+    <div
+      class="col-md-6 gloalsTexts"
+      style="height: 57px; text-align: right; margin-bottom: 73px"
+      [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+    >
+      <div class="d-flex align-items-center gap-2 justify-content-end">
+        <p class="goalsItems">{{ "adaptHead" | translate }}</p>
+        <img class="vector" src="assets/images/Vector (1).png" alt="" />
+      </div>
+      <div>
+        <p class="goalsTexts">
+          {{ "adapt" | translate }}
+        </p>
+      </div>
+    </div>
+    <!--  -->
+    <div
+      class="col-md-6 gloalsTexts"
+      style="height: 57px; text-align: right; margin-bottom: 73px"
+      [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+    >
+      <div class="d-flex align-items-center gap-2 justify-content-end">
+        <p class="goalsItems">{{ "trustHead" | translate }}</p>
+        <img class="vector" src="assets/images/Vector (1).png" alt="" />
+      </div>
+      <div>
+        <p class="goalsTexts">
+          {{ "trust" | translate }}
+        </p>
+      </div>
+    </div>
+    <!--  -->
+
+    <div
+      class="col-md-6 gloalsTexts"
+      style="height: 57px; text-align: right; margin-bottom: 73px"
+      [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+    >
+      <div class="d-flex align-items-center gap-2 justify-content-end">
+        <p class="goalsItems">{{ "solutionsHead" | translate }}</p>
+        <img class="vector" src="assets/images/Vector (1).png" alt="" />
+      </div>
+      <div>
+        <p class="goalsTexts">{{ "solutions" | translate }}</p>
+      </div>
+    </div>
+    <!--  -->
+    <div
+      class="col-md-6 gloalsTexts"
+      style="height: 57px; text-align: right; margin-bottom: 73px"
+      [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+    >
+      <div class="d-flex align-items-center gap-2 justify-content-end">
+        <p class="goalsItems">{{ "reachMoreHead" | translate }}</p>
+        <img class="vector" src="assets/images/Vector (1).png" alt="" />
+      </div>
+      <div>
+        <p class="goalsTexts">{{ "reachMore" | translate }}</p>
+      </div>
+    </div>
+    <!--  -->
+  </div>
+</div>
+
+<div
+  id="areas"
+  data-aos="fade-up"
+  data-aos-duration="1000"
+  style="padding: 0 20px"
+>
+  <p class="serviceP">{{ "places" | translate }}</p>
+
+  <div class="areasContainer">
+    <div class="d-flex align-items-center textsCont">
+      <p class="areasText">{{ "al_rehab" | translate }}</p>
+      <img src="assets/images/basil_map-location-solid.png" alt="" />
+    </div>
+    <!--  -->
+    <div class="d-flex align-items-center textsCont">
+      <p class="areasText">{{ "giza" | translate }}</p>
+      <img src="assets/images/basil_map-location-solid.png" alt="" />
+    </div>
+    <!--  -->
+
+    <div class="d-flex align-items-center textsCont">
+      <p class="areasText">{{ "qalyubia" | translate }}</p>
+      <img src="assets/images/basil_map-location-solid.png" alt="" />
+    </div>
+    <!--  -->
+
+    <div class="d-flex align-items-center textsCont">
+      <p class="areasText">{{ "sheikh_zayed" | translate }}</p>
+      <img src="assets/images/basil_map-location-solid.png" alt="" />
+    </div>
+    <!--  -->
+
+    <div class="d-flex align-items-center textsCont">
+      <p class="areasText">{{ "al_obour" | translate }}</p>
+      <img src="assets/images/basil_map-location-solid.png" alt="" />
+    </div>
+    <!--  -->
+
+    <div class="d-flex align-items-center textsCont">
+      <p class="areasText">{{ "cairo" | translate }}</p>
+      <img src="assets/images/basil_map-location-solid.png" alt="" />
+    </div>
+    <!--  -->
+
+    <div class="d-flex align-items-center textsCont">
+      <p class="areasText">{{ "al_shorouk" | translate }}</p>
+      <img src="assets/images/basil_map-location-solid.png" alt="" />
+    </div>
+    <!--  -->
+
+    <div class="d-flex align-items-center textsCont">
+      <p class="areasText">{{ "fifth_settlement" | translate }}</p>
+      <img src="assets/images/basil_map-location-solid.png" alt="" />
+    </div>
+    <!--  -->
+
+    <div class="d-flex align-items-center textsCont">
+      <p class="areasText">{{ "eastern_province" | translate }}</p>
+      <img src="assets/images/basil_map-location-solid.png" alt="" />
+    </div>
+    <!--  -->
+
+    <div class="d-flex align-items-center textsCont">
+      <p class="areasText">{{ "new_cairo" | translate }}</p>
+      <img src="assets/images/basil_map-location-solid.png" alt="" />
+    </div>
+    <!--  -->
+
+    <div class="d-flex align-items-center textsCont">
+      <p class="areasText">{{ "sixth_of_october_city" | translate }}</p>
+      <img src="assets/images/basil_map-location-solid.png" alt="" />
+    </div>
+    <!--  -->
+    <div class="d-flex align-items-center textsCont">
+      <p class="areasText">{{ "suez" | translate }}</p>
+      <img src="assets/images/basil_map-location-solid.png" alt="" />
+    </div>
+    <!--  -->
+    <div class="d-flex align-items-center textsCont">
+      <p class="areasText">{{ "madinet_nasr" | translate }}</p>
+      <img src="assets/images/basil_map-location-solid.png" alt="" />
+    </div>
+    <!--  -->
+    <div class="d-flex align-items-center textsCont">
+      <p class="areasText">{{ "badr" | translate }}</p>
+      <img src="assets/images/basil_map-location-solid.png" alt="" />
+    </div>
+    <!--  -->
+    <div class="d-flex align-items-center textsCont">
+      <p class="areasText">
+        {{ "new_administrative_capital" | translate }}
+      </p>
+      <img src="assets/images/basil_map-location-solid.png" alt="" />
+    </div>
+    <!--  -->
+    <div class="d-flex align-items-center textsCont">
+      <p class="areasText">{{ "other_areas" | translate }}</p>
+      <img src="assets/images/basil_map-location-solid.png" alt="" />
+    </div>
+    <!--  -->
+  </div>
+
+  <img
+    src="assets/images/service-map.png"
+    class="img-fluid mt-4 w-100"
+    alt=""
+    [ngStyle]="{ padding: !smallScreen ? '0 30px' : '0px' }"
+  />
+</div>
+
+<div class="contact" id="contact" data-aos="fade-up" data-aos-duration="1000">
+  <p class="sendText">{{ "contact" | translate }}</p>
+
+  <!--  -->
+  <div class="row mt-4 justify-content-center" *ngIf="currentLang == 'en'">
+    <div class="col-12 row justify-content-center" style="width: 95%;">
+      <div class="col-md-4 my-2" >
+        <div
+        class="contactDiv  d-flex justify-content-center align-items-center gap-2"
+        (mouseenter)="showHead = true"
+        (mouseleave)="showHead = false"
+      >
+        <p class="contactText" [ngStyle]="{ 'text-align': 'end' }">
+          +2 01100 10 2100
+        </p>
+        <img
+          src="assets/images/Vectorr.png"
+          alt=""
+          class="contactImgs"
+          *ngIf="!showHead"
+        />
+        <img
+          src="assets/images/VectorW.png"
+          alt=""
+          class="contactImgs"
+          *ngIf="showHead"
+        />
+      </div>
+      </div>
+      <div class="col-md-4 my-2">
+        <div
+        class="contactDiv  d-flex justify-content-center align-items-center gap-2"
+        (mouseenter)="showLine = true"
+        (mouseleave)="showLine = false"
+      >
+        <p class="contactText" [ngStyle]="{ 'text-align': 'end' }">
+          info@talata-eg.com
+        </p>
+        <img
+          src="assets/images/line-md_email.png"
+          alt=""
+          class="contactImgs"
+          *ngIf="!showLine"
+        />
+        <img
+          src="assets/images/line-md_emailw.png"
+          alt=""
+          class="contactImgs"
+          *ngIf="showLine"
+        />
+      </div>
+      </div>
+
+      <div class="col-md-4 my-2">
+         <div
+        class="contactDiv  d-flex justify-content-center align-items-center gap-2"
+        (mouseenter)="showVictor = true"
+        (mouseleave)="showVictor = false"
+      >
+        <p class="contactText" style="direction: rtl; text-align: start">
+          {{ "address" | translate }}
+        </p>
+        <img
+          src="assets/images/Vector.png"
+          alt=""
+          class="contactImgs"
+          *ngIf="!showVictor"
+        />
+        <img
+          src="assets/images/Vectorrr.png"
+          alt=""
+          class="contactImgs"
+          *ngIf="showVictor"
+        />
+      </div>
+      </div>
+    </div>
+
+
+
+  </div>
+  <div class="row mt-4 justify-content-center" *ngIf="currentLang == 'ar'">
+    <div class="col-12 row justify-content-center" style="width: 95%;">
+
+    <div class="col-md-4 my-2">
+      <div
+        class="contactDiv d-flex justify-content-center align-items-center gap-2"
+        (mouseenter)="showVictor = true"
+        (mouseleave)="showVictor = false"
+      >
+
+        <img
+          src="assets/images/Vector.png"
+          alt=""
+          class="contactImgs"
+          *ngIf="!showVictor"
+        />
+        <img
+          src="assets/images/Vectorrr.png"
+          alt=""
+          class="contactImgs"
+          *ngIf="showVictor"
+        />
+        <p class="contactText" style="direction: ltr; text-align: start">
+          {{ "address" | translate }}
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4 my-2">
+      <div
+        class="contactDiv d-flex justify-content-center align-items-center gap-2"
+        (mouseenter)="showLine = true"
+        (mouseleave)="showLine = false"
+      >
+
+        <img
+          src="assets/images/line-md_email.png"
+          alt=""
+          class="contactImgs"
+          *ngIf="!showLine"
+        />
+        <img
+          src="assets/images/line-md_emailw.png"
+          alt=""
+          class="contactImgs"
+          *ngIf="showLine"
+        />
+        <p class="contactText" [ngStyle]="{ 'text-align': 'end' }">
+          info@talata-eg.com
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4 my-2">
+      <div
+        class="contactDiv d-flex justify-content-center align-items-center gap-2"
+        (mouseenter)="showHead = true"
+        (mouseleave)="showHead = false"
+      >
+
+        <img
+          src="assets/images/Vectorr.png"
+          alt=""
+          class="contactImgs"
+          *ngIf="!showHead"
+        />
+        <img
+          src="assets/images/VectorW.png"
+          alt=""
+          class="contactImgs"
+          *ngIf="showHead"
+        />
+        <p
+        class="contactText"
+        [ngStyle]="{ 'text-align': 'end', direction: 'ltr' }"
+      >
+        +2 01100 10 2100
+      </p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <!--  -->
+</div>
+
+<div
+  class="sendShipment w-100"
+  id="sendShipment"
+  data-aos="fade-up"
+  data-aos-duration="1000"
+>
+  <p class="sendText">{{ "SendShipment" | translate }}</p>
+
+  <ng-container [formGroup]="shipmentForm">
+    <div class="inputsContainer row">
+      <!-- Shipment Data -->
+      <div class="col-lg-4" formGroupName="shipmentData" *ngIf="!smallScreen">
+        <div class="sendCont">
+          <p class="headersSent">{{ "shipment_data" | translate }}</p>
+          <input
+            type="text"
+            placeholder="{{ 'description' | translate }}"
+            formControlName="description"
+          />
+        </div>
+
+        <div class="sendCont">
+          <input
+            type="text"
+            placeholder="{{ 'optional_weight' | translate }}"
+            formControlName="optionalWeight"
+          />
+        </div>
+
+        <div class="sendCont">
+          <input
+            type="text"
+            placeholder="{{ 'optional_dimensions' | translate }}"
+            formControlName="optionalDimensions"
+          />
+        </div>
+
+        <div class="sendCont">
+          <textarea
+            placeholder="{{ 'notes' | translate }}"
+            formControlName="notes"
+          ></textarea>
+        </div>
+      </div>
+      <div class="col-lg-4" formGroupName="senderData" *ngIf="smallScreen">
+        <div class="sendCont">
+          <p class="headersSent">{{ "sender_data" | translate }}</p>
+          <input
+            type="text"
+            placeholder="{{ 'full_name' | translate }}"
+            formControlName="fullName"
+          />
+        </div>
+
+        <div class="sendCont">
+          <input
+            type="text"
+            placeholder="{{ 'mobile_number' | translate }}"
+            formControlName="mobileNumber"
+          />
+        </div>
+
+        <div class="sendCont">
+          <input
+            type="text"
+            placeholder="{{ 'optional_email' | translate }}"
+            formControlName="optionalEmail"
+          />
+        </div>
+
+        <div class="sendCont">
+          <textarea
+            placeholder="{{ 'delivery_address' | translate }}"
+            formControlName="deliveryAddress"
+          ></textarea>
+        </div>
+      </div>
+      <!-- Recipient Data -->
+      <div class="col-lg-4" formGroupName="recipientData">
+        <div class="sendCont">
+          <p class="headersSent">{{ "recipient_data" | translate }}</p>
+          <input
+            type="text"
+            placeholder="{{ 'full_name' | translate }}"
+            formControlName="fullName"
+          />
+        </div>
+
+        <div class="sendCont">
+          <input
+            type="text"
+            placeholder="{{ 'mobile_number' | translate }}"
+            formControlName="mobileNumber"
+          />
+        </div>
+
+        <div class="sendCont">
+          <input
+            type="text"
+            placeholder="{{ 'optional_email' | translate }}"
+            formControlName="optionalEmail"
+          />
+        </div>
+
+        <div class="sendCont">
+          <textarea
+            placeholder="{{ 'delivery_address' | translate }}"
+            formControlName="deliveryAddress"
+          ></textarea>
+        </div>
+      </div>
+
+      <!-- Sender Data -->
+      <div class="col-lg-4" formGroupName="senderData" *ngIf="!smallScreen">
+        <div class="sendCont">
+          <p class="headersSent">{{ "sender_data" | translate }}</p>
+          <input
+            type="text"
+            placeholder="{{ 'full_name' | translate }}"
+            formControlName="fullName"
+          />
+        </div>
+
+        <div class="sendCont">
+          <input
+            type="text"
+            placeholder="{{ 'mobile_number' | translate }}"
+            formControlName="mobileNumber"
+          />
+        </div>
+
+        <div class="sendCont">
+          <input
+            type="text"
+            placeholder="{{ 'optional_email' | translate }}"
+            formControlName="optionalEmail"
+          />
+        </div>
+
+        <div class="sendCont">
+          <textarea
+            placeholder="{{ 'delivery_address' | translate }}"
+            formControlName="deliveryAddress"
+          ></textarea>
+        </div>
+      </div>
+      <div class="col-lg-4" formGroupName="shipmentData" *ngIf="smallScreen">
+        <div class="sendCont">
+          <p class="headersSent">{{ "shipment_data" | translate }}</p>
+          <input
+            type="text"
+            placeholder="{{ 'description' | translate }}"
+            formControlName="description"
+          />
+        </div>
+
+        <div class="sendCont">
+          <input
+            type="text"
+            placeholder="{{ 'optional_weight' | translate }}"
+            formControlName="optionalWeight"
+          />
+        </div>
+
+        <div class="sendCont">
+          <input
+            type="text"
+            placeholder="{{ 'optional_dimensions' | translate }}"
+            formControlName="optionalDimensions"
+          />
+        </div>
+
+        <div class="sendCont">
+          <textarea
+            placeholder="{{ 'notes' | translate }}"
+            formControlName="notes"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="my-2">
+        <button class="sendButton" type="submit" (click)="onSaveShipment()">
+          {{ "sendOrder" | translate }}
+        </button>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<div class="footer">
+  <!-- <div class="d-flex justify-content-between footerCont" *ngIf="!smallScreen">
+    <div style="text-align: center">
+      <a class="footerText">{{ "privacy_policy" | translate }}</a>
+      <a class="footerText">{{ "terms_and_conditions" | translate }}</a>
+    </div>
+    <div style="text-align: center">
+      <a class="footerText"  href="#global">{{ "home" | translate }}</a>
+      <a class="footerText"  href="#us">{{ "why_choose_talata" | translate }}</a>
+      <a class="footerText" href="#advantages">{{ "Benefits" | translate }}</a>
+      <a class="footerText"  href="#aboutCompany">{{ "aboutUs" | translate }}</a>
+      <a class="footerText" href="#goals">{{ "goals" | translate }}</a>
+      <a class="footerText"         href="#areas"      >{{ "places" | translate }}</a>
+      <a class="footerText"         href="#contact"      >{{ "contact" | translate }}</a>
+      <a class="footerText"         href="#sendShipment"      >{{ "SendShipment" | translate }}</a>
+    </div>
+
+    <div style="text-align: center">
+      <div class="talataCont">
+        <div class="talataLogoWrapper">
+          <img src="assets/images/talata-logo-orginal-white 1.png" alt="" />
+        </div>
+      </div>
+      <div class="d-flex justify-content-end">
+        <p class="footerRights">© 2024 Talata. All rights reserved.</p>
+      </div>
+    </div>
+  </div> -->
+  <!-- <div class="d-flex justify-content-center cont" *ngIf="smallScreen">
+
+  </div> -->
+  <div class="row justify-content-center footContainer" *ngIf="smallScreen">
+    <div class="col-12 d-flex justify-content-center">
+      <img
+        src="assets/images/talata-logo-orginal-white 1.png"
+        alt=""
+        class="img-fluid footerImg"
+      />
+    </div>
+
+    <div class="col-12 row" *ngIf="smallScreen">
+      <div class="col-4 text-center p-3">
+        <div class="my-3">
+          <a class="footerText2" href="#privacy_policy">{{
+            "privacy_policy" | translate
+          }}</a>
+        </div>
+        <div class="my-3">
+          <a class="footerText2" href="#terms_and_conditions">{{
+            "terms_and_conditions" | translate
+          }}</a>
+        </div>
+      </div>
+      <div class="col-4 text-center p-3">
+        <div class="my-3">
+          <a class="footerText2" href="#global">{{ "home" | translate }}</a>
+        </div>
+        <div class="my-3">
+          <a class="footerText2" href="#us">{{
+            "why_choose_talata" | translate
+          }}</a>
+        </div>
+        <div class="my-3">
+          <a class="footerText2" href="#advantages">{{
+            "Benefits" | translate
+          }}</a>
+        </div>
+      </div>
+      <div class="col-4 text-center p-3">
+        <div class="my-3">
+          <a class="footerText2" href="#areas">{{ "places" | translate }}</a>
+        </div>
+
+        <div class="my-3">
+          <a class="footerText2" href="#contact">{{ "contact" | translate }}</a>
+        </div>
+        <div class="my-3" *ngIf="smallScreen">
+          <a class="footerText2" href="#goals">{{ "goals" | translate }}</a>
+        </div>
+        <div class="my-3" *ngIf="smallScreen">
+          <a class="footerText2" href="#aboutCompany">{{
+            "aboutUs" | translate
+          }}</a>
+        </div>
+      </div>
+      <div class="col-md-12 d-flex justify-content-end">
+        <p class="footerRights">© 2024 Talata. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <div class="row justify-content-center footContainer" *ngIf="!smallScreen">
+    <div class="col-12 row" style="padding: 0 47px; margin-top: 30px">
+      <div class="col-4 text-center p-3">
+        <div class="my-3">
+          <a class="footerText2" href="#privacy_policy">{{
+            "privacy_policy" | translate
+          }}</a>
+        </div>
+        <div class="my-3">
+          <a class="footerText2" href="#terms_and_conditions">{{
+            "terms_and_conditions" | translate
+          }}</a>
+        </div>
+      </div>
+      <div class="col-4 text-center p-3">
+        <div class="my-3">
+          <a class="footerText2" href="#global">{{ "home" | translate }}</a>
+        </div>
+        <div class="my-3">
+          <a class="footerText2" href="#us">{{
+            "why_choose_talata" | translate
+          }}</a>
+        </div>
+        <div class="my-3">
+          <a class="footerText2" href="#advantages">{{
+            "Benefits" | translate
+          }}</a>
+        </div>
+        <div class="my-3">
+          <a class="footerText2" href="#areas">{{ "places" | translate }}</a>
+        </div>
+
+        <div class="my-3">
+          <a class="footerText2" href="#contact">{{ "contact" | translate }}</a>
+        </div>
+        <div class="my-3" *ngIf="smallScreen">
+          <a class="footerText2" href="#goals">{{ "goals" | translate }}</a>
+        </div>
+        <div class="my-3" *ngIf="smallScreen">
+          <a class="footerText2" href="#aboutCompany">{{
+            "aboutUs" | translate
+          }}</a>
+        </div>
+      </div>
+
+      <div class="col-4 d-flex justify-content-center my-2">
+        <img
+          src="assets/images/talata-logo-orginal-white 1.png"
+          alt=""
+          class="img-fluid footerImg"
+        />
+      </div>
+      <div class="col-md-12 d-flex justify-content-end mt-4">
+        <p class="footerRights">© 2024 Talata. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</div>

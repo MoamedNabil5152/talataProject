@@ -4,7 +4,9 @@
   style="width: 100%"
 >
   <div class="row navbar fixed-top" *ngIf="!smallScreen">
-    <div class="col-md-8 menuCont d-flex align-items-center">
+    <div
+      class="col-md-8 menuCont d-flex justify-content-between align-items-center"
+    >
       <a class="items" id="en" (click)="switchLanguage()">
         {{ currentLang == "en" ? "EN" : "عربي" }}</a
       >
@@ -40,13 +42,7 @@
         style="width: auto"
         >{{ "goals" | translate }}</a
       >
-      <a
-        class="items"
-        id="about"
-        (click)="change('about')"
-        href="#aboutCompany"
-        style="width: auto"
-      >
+      <a class="items"         href="#aboutCompany"      id="about" (click)="change('about')" style="width: auto">
         {{ "aboutUs" | translate }}</a
       >
       <a
@@ -82,8 +78,5 @@
       />
     </div>
   </div>
-
-  <app-main></app-main>
-
 
 </div>

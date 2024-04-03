@@ -79,6 +79,8 @@ export class NavBarComponent implements AfterViewInit {
         element.classList.add('itemsActive');
       }
     });
+
+
   }
   ngAfterViewInit(): void {
     AOS.init();
@@ -118,6 +120,9 @@ export class NavBarComponent implements AfterViewInit {
 
     // Save the selected language in localStorage
     localStorage.setItem('lang', newLang);
+    setTimeout(() => {
+      location.reload()
+    }, 500);
   }
 
   onSaveShipment() {

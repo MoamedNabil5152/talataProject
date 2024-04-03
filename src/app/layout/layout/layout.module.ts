@@ -8,9 +8,8 @@ import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { SharedModule } from 'src/app/shared/shared/shared.module';
 import { LayoutComponent } from './components/layout/layout.component';
 import { Routing } from '../../routing';
-import { UsersModule } from 'src/app/pages/users/users.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MainComponent } from './components/main/main.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -20,7 +19,13 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [NavBarComponent, SideMenuComponent, LayoutComponent , MainComponent],
+  declarations: [
+    NavBarComponent,
+    SideMenuComponent,
+    LayoutComponent,
+
+
+  ],
   imports: [
     CommonModule,
     // LayoutRoutingModule,

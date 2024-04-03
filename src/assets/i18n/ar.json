@@ -58,7 +58,7 @@
 "badr": "Badr",
 "new_administrative_capital": "New Administrative Capital",
 "other_areas": "Other governorates and areas of Egypt (Coming soon)",
-"address": "79 Sakr Quresh Buildings, Sheraton Al Matar, Cairo",
+"address": "79 Sakr Quresh Buildings , Sheraton Al Matar, Cairo",
 
 "shipment_data": "Shipment Data",
 "description": "Description",
@@ -84,7 +84,24 @@
 "contact_us": "Contact Us",
 "send_shipment": "Send Shipment",
 "talata_logo_alt_text": "Talata Logo",
-"rights_reserved": "© 2024 Talata. All rights reserved."
+"rights_reserved": "© 2024 Talata. All rights reserved.",
+"collectDataHead": "1- Collecting Information:",
+"collectData": "We collect personal information voluntarily provided by customers during registration or when using our logistics services. This includes name, address, phone number, email address, and shipping details.",
+"useDataHead": "2- Using Information:",
+"useData": "We use personal information to provide shipping services, fulfill customer orders, improve the quality of our services, customize the customer experience, and communicate with them about our services and offers. We ensure security to protect personal information from unauthorized access and use.",
+"protectHead": "3- Protecting Information:",
+"protect": "We maintain an appropriate level of security to protect information from unauthorized access and unauthorized changes through appropriate technical and administrative procedures.",
+"shareInfoHead": "4- Sharing Information:",
+"shareInfo": "We share personal information with authorized shipping partners and official entities only when necessary to execute shipping services and comply with local laws.",
+"likeForInfoHead": "5- Compliance with Regulations:",
+"likeForInfo": "We commit to comply with all laws and regulations related to the protection of personal data, including the Personal Data Protection Law in the Arab Republic of Egypt.",
+"rightForEmployeesHead": "6- Employee Rights:",
+"rightForEmployees": "We respect the rights of customers to access, correct, delete, and express concerns about their personal information processing.",
+"updatesHead": "7- Privacy Policy Updates:",
+"updates": "We may update the privacy policy from time to time and will notify customers of any changes made.",
+"contactWithThemHead": "8- Contact:",
+"contactWithThem": "If you have any questions or inquiries about the privacy policy, please contact us via email or phone."
+
 
 
 
