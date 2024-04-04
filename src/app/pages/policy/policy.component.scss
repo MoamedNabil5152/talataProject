@@ -1,0 +1,37 @@
+
+.contTerms {
+  margin-top: 120px;
+}
+.terms {
+  font-size: 60px;
+  font-weight: 300;
+  font-family: "Almarai", sans-serif;
+  color: #4e425c;
+}
+.headOfConditions{
+  font-weight: 700;
+  font-family: "Almarai", sans-serif;
+  color: #726581;
+  font-size: 17px  ;
+
+}
+.textsOfConditions {
+  font-weight: 500;
+  font-family: "Almarai", sans-serif;
+  color: #726581;
+  font-size: 15px  ;
+
+}
+@media only screen and (max-width: 767px) {
+
+  .parentOfCond {
+    margin-left: 0 !important;
+    margin-left: 0 !important;
+    padding: 10px !important;
+    width: 100% !important;
+  }
+
+  .terms{
+    font-size: 44px !important;
+  }
+  }

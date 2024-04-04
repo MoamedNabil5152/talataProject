@@ -10,6 +10,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 
 import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
+import { UsersService } from 'src/app/pages/users/users.service';
 declare var AOS: any;
 
 @Component({
@@ -54,7 +55,7 @@ export class NavBarComponent implements AfterViewInit {
     })
   })
 
-  constructor(private translate: TranslateService , private fb : FormBuilder  ) {
+  constructor(private translate: TranslateService , private fb : FormBuilder , private userService : UsersService  ) {
     translate.setDefaultLang('ar');
     this.currentLang = localStorage.getItem('lang') || 'ar';
     translate.use(this.currentLang);
@@ -65,20 +66,64 @@ export class NavBarComponent implements AfterViewInit {
     this.showDiv = !this.showDiv;
   }
 
+  scrollToPage(text : any ,text2? : any) {
+
+
+  let element3: any = document.querySelectorAll('.items');
+
+  element3.forEach((item: any) => {
+    // Remove 'itemsActive' class from all elements
+    item.classList.remove('itemsActive');
+
+    // If the item's ID matches the provided text, add 'itemsActive' class
+    if (item.id === text) {
+      item.classList.add('itemsActive');
+    }
+  });
+
+
+  setTimeout(() => {
+    let element: any = document.getElementById(text);
+    let element2: any = document.getElementById(text2);
+    this.userService.scollSubject.next(element);
+    element2.classList.add('itemsActive');
+  }, 100);
+
+
+    // setTimeout(() => {
+    //   let element : any = document.getElementById(text)
+    //   let element2: any = document.getElementById(text2)
+
+    //   this.userService.scollSubject.next(element)
+    //   element2.classList.add('itemsActive')
+    //   setTimeout
+    // }, 100);
+  }
+
+
+  // let element: any = document.getElementById(text);
+  // let element2: any = document.getElementById(text2);
+  // let element3: any = document.querySelectorAll('.items');
+
+  // // element3.forEach((item: any) => {
+  // //   // Remove 'itemsActive' class from all elements
+  // //   item.classList.remove('itemsActive');
+
+  // //   // If the item's ID matches the provided text, add 'itemsActive' class
+  // //   if (item.id === text) {
+  // //     item.classList.add('itemsActive');
+  // //   }
+  // // });
+
+
+  // setTimeout(() => {
+  //   this.userService.scollSubject.next(element);
+  //   // element2.classList.add('itemsActive');
+  // }, 1000);
+
+
+
   change(text: any) {
-    // Get all elements with class 'items'
-    let elements = document.querySelectorAll('.items');
-
-    // Loop through all elements
-    elements.forEach((element) => {
-      // Remove 'itemsActive' class from all elements
-      element.classList.remove('itemsActive');
-
-      // If the element's ID matches the provided text, add 'itemsActive' class
-      if (element.id === text) {
-        element.classList.add('itemsActive');
-      }
-    });
 
 
   }

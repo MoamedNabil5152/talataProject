@@ -13,59 +13,65 @@
       <a
         class="items"
         id="sends"
-        (click)="change('sends')"
-        href="#sendShipment"
         style="width: auto"
+        [routerLink]="['/']"
+        (click)="scrollToPage('sendShipment' , 'sends')"
         >{{ "SendShipment" | translate }}</a
       >
       <a
         class="items"
         id="contacts"
-        (click)="change('contacts')"
-        href="#contact"
+        [routerLink]="['/']"
+        (click)="scrollToPage('contact' , 'contacts')"
         style="width: auto"
         >{{ "contact" | translate }}</a
       >
       <a
         class="items"
         id="area"
-        (click)="change('area')"
-        href="#areas"
+        [routerLink]="['/']"
+        (click)="scrollToPage('areas' , 'area')"
         style="width: auto"
         >{{ "places" | translate }}</a
       >
       <a
         class="items"
         id="goal"
-        (click)="change('goal')"
-        href="#goals"
+        [routerLink]="['/']"
+        (click)="scrollToPage('goals' , 'goal')"
         style="width: auto"
         >{{ "goals" | translate }}</a
       >
-      <a class="items"         href="#aboutCompany"      id="about" (click)="change('about')" style="width: auto">
+      <a
+        class="items"
+        id="aboutCompany2"
+        [routerLink]="['/']"
+        (click)="scrollToPage('aboutCompany' , 'aboutCompany2')"
+        style="width: auto"
+      >
         {{ "aboutUs" | translate }}</a
       >
       <a
         class="items"
         id="adv"
-        (click)="change('adv')"
-        href="#advantages"
+        [routerLink]="['/']"
+        (click)="scrollToPage('advantages' , 'adv')"
         style="width: auto"
         >{{ "Benefits" | translate }}</a
       >
       <a
         class="items"
         id="choice"
-        (click)="change('choice')"
-        href="#us"
+        [routerLink]="['/']"
+        (click)="scrollToPage('us' , 'choice')"
         style="width: auto"
         >{{ "whyTalata" | translate }}</a
       >
       <a
         class="items itemsActive"
         id="main"
-        (click)="change('main')"
-        href="#global"
+        [routerLink]="['/']"
+        (click)="scrollToPage('global' , 'main')"
         style="width: auto"
         >{{ "main" | translate }}</a
       >
@@ -79,4 +85,133 @@
     </div>
   </div>
 
+  <ng-container>
+    <div *ngIf="smallScreen">
+      <div class="navbar d-flex justify-content-between align-items-center">
+        <img
+          src="assets/images/talata-logo-horizontal.png"
+          alt=""
+          class="talat"
+        />
+        <div class="d-flex gap-5 align-items-center">
+          <div
+            class="d-flex justify-content-center align-items-center trans"
+            (click)="switchLanguage()"
+          >
+            {{ currentLang == "en" ? "EN" : "ع" }}
+          </div>
+
+          <i
+            class="pi pi-align-justify"
+            (click)="toggleDiv()"
+            *ngIf="!showDiv"
+          ></i>
+          <i class="pi pi-times" (click)="toggleDiv()" *ngIf="showDiv"></i>
+        </div>
+      </div>
+
+      <div
+        class="d-flex justify-content-center align-items-center menu"
+        *ngIf="showDiv"
+      >
+        <div class="myDiv">
+          <div>
+            <a
+              class="itemsMob"
+              id="sends"
+
+              [routerLink]="['/']"
+              (click)="scrollToPage('sendShipment' , 'sends')"
+              style="width: auto"
+              >{{ "SendShipment" | translate }}</a
+            >
+          </div>
+          <hr />
+          <div>
+            <a
+              class="itemsMob"
+              id="contacts"
+              [routerLink]="['/']"
+        (click)="scrollToPage('contact' , 'contacts')"
+              style="width: auto"
+              >{{ "contact" | translate }}</a
+            >
+          </div>
+          <hr />
+          <div>
+            <a
+              class="itemsMob"
+              id="area"
+              [routerLink]="['/']"
+              (click)="scrollToPage('areas' , 'area')"
+              style="width: auto"
+              >{{ "places" | translate }}</a
+            >
+          </div>
+          <hr />
+
+          <div>
+            <a
+              class="itemsMob"
+              id="goal"
+              [routerLink]="['/']"
+              (click)="scrollToPage('goals' , 'goal')"
+              style="width: auto"
+              >{{ "goals" | translate }}</a
+            >
+          </div>
+          <hr />
+
+          <div>
+            <a
+              class="itemsMob"
+              id="aboutCompany2"
+              (click)="change('about')"
+              [routerLink]="['/']"
+             (click)="scrollToPage('aboutCompany' , 'aboutCompany2')"
+            >
+              {{ "aboutUs" | translate }}</a
+            >
+          </div>
+          <hr />
+
+          <div>
+            <a
+              class="itemsMob"
+              id="adv"
+              [routerLink]="['/']"
+              (click)="scrollToPage('advantages' , 'adv')"
+              style="width: auto"
+              >{{ "Benefits" | translate }}</a
+            >
+          </div>
+
+          <hr />
+
+          <div>
+            <a
+              class="itemsMob"
+              id="choice"
+              [routerLink]="['/']"
+        (click)="scrollToPage('us' , 'choice')"
+              style="width: auto"
+              >{{ "whyTalata" | translate }}</a
+            >
+          </div>
+          <hr />
+
+          <div>
+            <a
+              class="itemsMob itemsActive"
+              id="main"
+              [routerLink]="['/']"
+              (click)="scrollToPage('global' , 'main')"
+              style="width: auto"
+              >{{ "main" | translate }}</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
 </div>

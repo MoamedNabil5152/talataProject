@@ -50,10 +50,10 @@
 "cairo": "Cairo",
 "al_shorouk": "Al Shorouk",
 "fifth_settlement": "Fifth Settlement (Tagammoa El Khames)",
-"eastern_province": "Eastern Province",
+"eastern_province": "ٍShubra Elkhima",
 "new_cairo": "New Cairo",
 "sixth_of_october_city": "Sixth of October City",
-"suez": "Suez",
+"suez": "Helwan",
 "madinet_nasr": "Madinet Nasr (City Stars)",
 "badr": "Badr",
 "new_administrative_capital": "New Administrative Capital",
@@ -100,11 +100,45 @@
 "updatesHead": "7- Privacy Policy Updates:",
 "updates": "We may update the privacy policy from time to time and will notify customers of any changes made.",
 "contactWithThemHead": "8- Contact:",
-"contactWithThem": "If you have any questions or inquiries about the privacy policy, please contact us via email or phone."
+"contactWithThem": "If you have any questions or inquiries about the privacy policy, please contact us via email or phone.",
+"servicesProvided": {
+  "head": "1- Services Provided:",
+  "content": "We provide domestic shipping services in the Arab Republic of Egypt according to the terms and conditions stipulated in this agreement."
+},
+"responsibilities": {
+  "head": "2- Responsibilities:",
+  "content": "We commit to providing shipping services with the utmost craftsmanship and professionalism, ensuring the safety of goods and their timely arrival at their intended destination."
+},
+"paymentAndInvoices": {
+  "head": "3- Payment and Invoices:",
+  "content": "Customers must pay the agreed fees for shipping services according to the specified tariff, and certified invoices will be issued for these services."
+},
+"liabilityForDamage": {
+  "head": "4- Liability for Damage:",
+  "content": "We are not liable for any damage to goods during shipping operations except in cases of clear negligence or breach of our agreed-upon obligations."
+},
+"cancellationAndRefund": {
+  "head": "5- Cancellation and Refund:",
+  "content": "Customers have the right to cancel the service before the commencement of the shipping process, bearing the cancellation fees, and fees cannot be refunded after the commencement of shipping."
+},
+"rightsAndLicenses": {
+  "head": "6- Rights and Licenses:",
+  "content": "We reserve all rights and licenses related to shipping services and related intellectual property."
+},
+"modificationOfTerms": {
+  "head": "7- Modification of Terms:",
+  "content": "We reserve the right to modify the terms and conditions of the service at any time, and customers will be notified of any changes."
+},
+"applicableLaw": {
+  "head": "8- Applicable Law:",
+  "content": "This agreement is subject to the laws of the Arab Republic of Egypt, and it shall be interpreted, enforced, and relinquished according to those laws."
+},
+"disclaimerOfShipments": {
+  "head": "9- Disclaimer of Shipments:",
+  "content1": "The company reserves the right to refuse or withhold any shipment prohibited or violating regulations and laws.",
+  "content2" : "The company is not responsible for any shipment violating regulations and laws that are inspected and tracked by authorities for security reasons and seized by authorities."
 
-
-
-
+}
 
 
 }

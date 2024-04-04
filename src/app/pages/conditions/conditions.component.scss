@@ -20,5 +20,17 @@
   font-family: "Almarai", sans-serif;
   color: #726581;
   font-size: 15px  ;
-  
+
+}
+@media only screen and (max-width: 767px) {
+
+.parentOfCond {
+  margin-left: 0 !important;
+  margin-left: 0 !important;
+  padding: 10px !important;
+  width: 100% !important;
+}
+.terms{
+  font-size: 44px !important;
+}
 }

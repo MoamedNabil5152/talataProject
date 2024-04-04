@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./policy.component.scss']
 })
 export class PolicyComponent {
+  currentLang : any
+  constructor(){
+    this.currentLang = localStorage.getItem('lang') || 'ar';
 
+  }
 }

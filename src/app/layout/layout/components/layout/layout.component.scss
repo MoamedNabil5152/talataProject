@@ -5,6 +5,596 @@
   top: 173px !important;
   left: 104px !important;
 
-  
 
+
+}
+
+.footer {
+  width: 100%;
+  margin-top: 229px;
+  // height: auto;
+  // position: relative;
+  background: url("/assets/images/Rectangl.png");
+  height: auto;
+}
+
+.footContainer {
+  margin-top: 120px;
+}
+.footerImg {
+  margin-top: 37px;
+  height: 115px;
+}
+.footerText2 {
+  font-weight: 500;
+  font-size: 15px;
+  color: #fcfcfc;
+  font-family: "Almarai", sans-serif;
+  margin-bottom: 17px;
+  text-decoration: none !important;
+  // display: block !important;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .navbar {
+    height: auto; /* Change height to auto for smaller screens */
+  }
+
+  .formMainTexts {
+    width: 100% !important;
+  }
+  .content {
+    margin-left: 250px; /* Adjust based on your sidebar width */
+  }
+
+  .menuCont {
+    margin-left: 62px;
+  }
+
+  .imgs {
+    top: 13px; /* Adjust top position */
+    left: auto; /* Reset left position */
+    right: 12px; /* Adjust right position */
+  }
+
+  .messageImgs,
+  .AlarmImgs {
+    top: auto; /* Reset top position */
+    left: auto; /* Reset left position */
+    right: 12px; /* Adjust right position */
+  }
+
+  .profileImag {
+    top: auto; /* Reset top position */
+    left: auto; /* Reset left position */
+    right: 12px; /* Adjust right position */
+  }
+
+  .navContainer {
+    margin-left: 62px;
+  }
+
+  .infoCont {
+    background-image: url("/assets/images/Group.png");
+  }
+
+  .centered {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-40%, -40%);
+    width: 75%;
+    height: 260x;
+    bottom: 32px;
+    color: #fcfcfc;
+    font-family: "Almarai", sans-serif;
+    font-size: 42px !important;
+    text-align: center;
+  }
+
+  .centered2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    height: 38px;
+    color: #e0dee3;
+    font-family: "Almarai", sans-serif;
+    font-size: 22px;
+    padding: 0 27px;
+    text-align: center;
+  }
+
+  .centered3 {
+    position: absolute;
+    top: 511px;
+    left: 0px;
+    width: 100%;
+    color: #e0dee3;
+    font-family: "Almarai", sans-serif;
+    font-size: 34px;
+    text-align: center;
+    z-index: 3;
+    display: block;
+  }
+
+  .sendButton,
+  .connectButton,
+  .connectButtonSpecial {
+    margin: 0 10px;
+  }
+
+  .imgCont {
+    width: 100%;
+    height: 765px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .usImgsContainer {
+    margin: 0;
+    margin-bottom: 15px;
+    // height: 441px;
+    // display: block !important;
+  }
+
+  .whyUs {
+    // margin: 0 73px;
+    text-align: center;
+  }
+
+  .secondUsImgsContainer {
+    margin: 0 !important;
+    text-align: center !important;
+    display: block !important;
+    margin-bottom: 15px !important;
+    margin-top: 799px !important;
+  }
+
+  .usHeader {
+    margin-top: 44px !important;
+  }
+
+  .benefitCont {
+    margin-left: 0px !important;
+    display: block !important;
+    margin-right: 0;
+    padding: 0px !important;
+  }
+
+  .benifits {
+    height: auto;
+    margin-top: 0;
+  }
+
+  .parent {
+    margin-bottom: 40px !important;
+  }
+
+  .benefitImg {
+    width: 391px;
+    height: 332px;
+    margin-left: 17px;
+  }
+
+  .advText {
+    font-size: 25px;
+    color: #4e425c;
+  }
+
+  .secondBen {
+    margin-top: 144px;
+  }
+
+  .main {
+    height: 814px !important;
+  }
+
+  .benefitCont2 {
+    margin-top: 247px;
+    margin-bottom: 25px;
+  }
+  .centeredAboutCompany2 {
+    position: absolute;
+    top: 346px;
+    text-align: center !important;
+
+    height: auto;
+    color: #fcfcfc;
+    font-family: "Almarai", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    transform: translate(-50%, -50%) !important;
+    width: 311px;
+  }
+  .centeredAbout {
+    position: absolute;
+    top: calc(346px + 225px + 20px);
+    text-align: center !important;
+
+    height: 225px;
+    color: #fcfcfc;
+    font-family: "Almarai", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    transform: translate(-50%, -50%) !important;
+    width: 311px;
+  }
+
+  .abouts {
+    height: 0 !important;
+  }
+
+  .benText {
+    margin-top: 135px;
+    padding: 0 24px;
+  }
+
+  .secondAdvText {
+    color: #726581;
+    font-weight: 400;
+    font-size: 17px;
+    font-family: "Almarai", sans-serif;
+    margin-bottom: 24px;
+    padding: 0 41px;
+  }
+
+  .benefitCont2 {
+    display: block !important;
+  }
+
+  .connectButtonSpecial {
+    margin-bottom: 8px;
+  }
+
+  .goalsContainer {
+    margin: 0;
+  }
+  .ourGorls {
+    margin-top: 31px;
+  }
+  .gloadP {
+    margin-bottom: 10px;
+  }
+
+  .gloalsTexts {
+    padding: 29px;
+  }
+  .areasContainer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 8px;
+  }
+  .textsCont {
+    margin: 10px;
+    background-color: #4e328a;
+    color: #e7d538;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-wrap: break-word;
+    float: left;
+  }
+
+  .areasText {
+    white-space: pre-wrap;
+    margin-right: 10px;
+    font-family: "Almarai", sans-serif;
+  }
+
+  .areas {
+    height: 390px;
+    width: 426px;
+    margin: 0 !important;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    padding: 0 36px !important;
+  }
+
+  .contact {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+
+    text-align: center;
+  }
+
+  .contactDiv {
+    background-color: #fcfcfc;
+    border-radius: 16px;
+    padding: 0px 13px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    white-space: pre-wrap;
+  }
+
+  .contactText {
+    padding: 0 3px;
+  }
+
+  .sendShipment {
+    margin-top: 44px;
+  }
+
+  .inputsContainer {
+    margin-top: 40px;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: #f5f4f6;
+    border-radius: 24px;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin: 0 6px;
+    box-shadow: 0px 11px 0px #fd385d; /* Adjust values as needed */
+  }
+
+  .sendText {
+    margin-bottom: 33px;
+  }
+
+  .specBenefit {
+    flex-direction: column-reverse; /* On small screens, reverse the flex direction */
+  }
+
+  .specBenefit {
+    .benefitImgs2 {
+      order: -1; /* Initially, set the image to appear last */
+    }
+  }
+
+  .benImages {
+    margin-top: 180px;
+  }
+
+  .secBenfit {
+    height: 100px;
+  }
+
+  .firstBen {
+    margin-top: 30px;
+  }
+
+  .footerCont2 {
+    position: absolute;
+    top: 12px;
+    left: 120;
+    right: 120;
+    bottom: 0;
+    padding: 20px;
+    color: white;
+  }
+
+  .talataCont2 {
+    height: 50px;
+  }
+
+  .cont {
+    // position: absolute;
+    // top: 15;
+    // left: 120;
+    // right: 120;
+    // bottom: 0;
+    // padding: 20px;
+    // color: white;
+    position: absolute !important;
+    top: 15px;
+
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+  }
+  .foot {
+    position: absolute;
+    top: 105px !important;
+    bottom: 0;
+    color: #fff;
+    padding: 0 10 !important;
+    padding: 10px !important;
+    left: 11px !important;
+    right: 11px !important;
+  }
+
+  // .footerImg {
+  //   height: 700px !important;
+  // }
+
+  .sendCont {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  input,
+  textarea {
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  .navbar {
+    height: 74px !important;
+    padding: 10px;
+    position: relative;
+  }
+
+  .talat {
+    height: 42px;
+  }
+  .trans {
+    height: 30px;
+    width: 30px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 50%;
+    padding: 7px;
+    font-family: "Almarai", sans-serif;
+    font-weight: 600;
+  }
+
+  .menu {
+    height: auto;
+    width: auto;
+    background-color: #fcfcfc;
+    position: absolute;
+    z-index: 3333;
+    margin: 0 auto;
+    left: 30%;
+    padding: 10px;
+    box-shadow: 0px 11px 18px -3px rgba(0, 0, 0, 0.1),
+      0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 2s ease-in-out; /* Smooth transition effect */
+  }
+
+  .myDiv {
+    transition: width 0.5s, height 0.5s, background-color 0.5s; /* Define transition properties */
+  }
+
+  .itemsMob {
+    color: #726581;
+    font-weight: 700;
+    font-size: 17px;
+    margin-right: 20px;
+    font-family: "Almarai", sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .top-image {
+    height: 761px;
+  }
+  .footer {
+    height: 653px  !important;
+  }
+
+  .sendText {
+    font-weight: 300;
+    font-size: 43px;
+    color: #4e328a;
+    font-family: "Almarai", sans-serif;
+  }
+
+  .usHeader {
+    margin-top: 120px;
+    color: #4e328a;
+    font-weight: 300;
+    font-size: 40px;
+    font-family: "Almarai", sans-serif;
+  }
+
+  .sendButtonBen {
+    background-color: #fd385d;
+    font-weight: 800;
+    font-size: 15px;
+    text-align: center;
+    color: #fcfcfc;
+    border-radius: 16px;
+    border: #fd385d;
+    height: 65px;
+    width: 181px;
+    margin: 0 10px;
+    font-family: "Almarai", sans-serif;
+    z-index: 222;
+    cursor: pointer;
+    margin-bottom: 32px;
+  }
+  .sendButtonBen:hover {
+    background-color: #b41936 !important  ;
+  }
+
+  .centered2 {
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    height: 38px;
+    color: #e0dee3;
+    font-family: "Almarai", sans-serif;
+    font-size: 22px;
+    padding: 0 27px;
+    text-align: center;
+  }
+
+  .contactForMob {
+    display: block !important;
+  }
+
+  .connectButtonCont,
+  .sendButtonCont {
+    margin-bottom: 32px;
+  }
+
+  .parentOfTexts {
+    width: auto !important;
+  }
+}
+
+/* Add more media queries as necessary for other screen sizes */
+@media only screen and (min-device-width: 768px) /* Minimum width for iPad */ and (max-device-width: 1024px) /* Maximum width for iPad */ {
+  .footer {
+    /* Styles specific to iPad screens */
+    /* For example: */
+    height: 1205px;
+  }
+
+  .benefitCont {
+    margin-top: 40px;
+    width: 1, 63px;
+    height: 331px;
+    padding: 0;
+  }
+  .benSpecial {
+    width: 300px !important;
+  }
+
+  .secBenfit {
+    width: 521px !important;
+  }
+  .areas {
+    height: 531px;
+    padding: 0px 54px !important;
+    width: 100% !important;
+    width: 920px !important;
+  }
+
+  .contact {
+    text-align: center;
+  }
+
+  .inputsContainer {
+    margin-top: 40px;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: #f5f4f6;
+    border-radius: 24px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 25px;
+    box-shadow: 0px 11px 0px #fd385d;
+  }
+
+  // .centered {
+  //   position: absolute;
+  //   top: 193px;
+  //   left: 0 !important;
+  //   width: 906px !important;
+  //   height: 260x;
+  //   bottom: 32px;
+  //   color: #fcfcfc;
+  //   font-family: "Almarai", sans-serif;
+  //   font-size: 73px;
+  //   text-align: center;
+  // }
+
+  .centered2 {
+    position: absolute;
+    top: 485px;
+    left: 0px !important;
+    width: 1311px;
+    font-weight: 400;
+    height: 38px;
+    color: #e0dee3;
+    font-family: "Almarai", sans-serif;
+    font-size: 24px;
+    text-align: center;
+  }
 }

@@ -1,6 +1,7 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
+import { UsersService } from '../users/users.service';
 declare var AOS: any;
 
 @Component({
@@ -8,7 +9,7 @@ declare var AOS: any;
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
 })
-export class MainComponent implements AfterViewInit {
+export class MainComponent implements AfterViewInit , OnInit {
   smallScreen: boolean = false;
   showDiv: boolean = false;
 
@@ -42,13 +43,23 @@ export class MainComponent implements AfterViewInit {
     }),
   });
 
-  constructor(private translate: TranslateService, private fb: FormBuilder) {
+  constructor(private translate: TranslateService, private fb: FormBuilder , private userService : UsersService) {
     translate.setDefaultLang('ar');
     this.currentLang = localStorage.getItem('lang') || 'ar';
     translate.use(this.currentLang);
     this.currentLang == 'en'
       ? (this.direction = 'ltr')
       : (this.direction = 'rtl');
+  }
+  ngOnInit(): void {
+    this.userService.scollSubjectObs.subscribe((res : HTMLElement)=>{
+      if(res) {
+
+        res.scrollIntoView()
+
+      }
+    })
+
   }
 
   toggleDiv() {

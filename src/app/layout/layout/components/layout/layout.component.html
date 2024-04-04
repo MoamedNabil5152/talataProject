@@ -1,7 +1,131 @@
 <div>
   <app-nav-bar> </app-nav-bar>
 
-  <div style="margin-top: 148px">
+  <div>
     <router-outlet></router-outlet>
+  </div>
+
+  <div class="footer">
+    <div class="row justify-content-center footContainer" *ngIf="smallScreen">
+      <div class="col-12 d-flex justify-content-center">
+        <img
+          src="assets/images/talata-logo-orginal-white 1.png"
+          alt=""
+          class="img-fluid footerImg"
+        />
+      </div>
+
+      <div class="col-12 row" *ngIf="smallScreen">
+        <div class="col-4 text-center p-3">
+          <div class="my-3">
+            <a class="footerText2" [routerLink]="['/privacy-policy']">{{
+              "privacy_policy" | translate
+            }}</a>
+          </div>
+          <div class="my-3">
+            <a class="footerText2" [routerLink]="['/terms-conditions']">{{
+              "terms_and_conditions" | translate
+            }}</a>
+          </div>
+        </div>
+        <div class="col-4 text-center p-3">
+          <div class="my-3">
+            <a class="footerText2" href="#global">{{ "home" | translate }}</a>
+          </div>
+          <div class="my-3">
+            <a class="footerText2" href="#us">{{
+              "why_choose_talata" | translate
+            }}</a>
+          </div>
+          <div class="my-3">
+            <a class="footerText2" href="#advantages">{{
+              "Benefits" | translate
+            }}</a>
+          </div>
+        </div>
+        <div class="col-4 text-center p-3">
+          <div class="my-3">
+            <a class="footerText2" href="#areas">{{ "places" | translate }}</a>
+          </div>
+
+          <div class="my-3">
+            <a class="footerText2" href="#contact">{{
+              "contact" | translate
+            }}</a>
+          </div>
+          <div class="my-3" *ngIf="smallScreen">
+            <a class="footerText2" href="#goals">{{ "goals" | translate }}</a>
+          </div>
+          <div class="my-3" *ngIf="smallScreen">
+            <a class="footerText2" href="#aboutCompany">{{
+              "aboutUs" | translate
+            }}</a>
+          </div>
+        </div>
+        <div class="col-md-12 d-flex justify-content-end">
+          <p class="footerRights">© 2024 Talata. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="row justify-content-center footContainer" *ngIf="!smallScreen">
+      <div class="col-12 row" style="padding: 0 47px; margin-top: 30px">
+        <div class="col-4 text-center p-3">
+          <div class="my-3">
+            <a class="footerText2" [routerLink]="['/privacy-policy']">{{
+              "privacy_policy" | translate
+            }}</a>
+          </div>
+          <div class="my-3">
+            <a class="footerText2" [routerLink]="['/terms-conditions']">{{
+              "terms_and_conditions" | translate
+            }}</a>
+          </div>
+        </div>
+        <div class="col-4 text-center p-3">
+          <div class="my-3">
+            <a class="footerText2" href="#global">{{ "home" | translate }}</a>
+          </div>
+          <div class="my-3">
+            <a class="footerText2" href="#us">{{
+              "why_choose_talata" | translate
+            }}</a>
+          </div>
+          <div class="my-3">
+            <a class="footerText2" href="#advantages">{{
+              "Benefits" | translate
+            }}</a>
+          </div>
+          <div class="my-3">
+            <a class="footerText2" href="#areas">{{ "places" | translate }}</a>
+          </div>
+
+          <div class="my-3">
+            <a class="footerText2" href="#contact">{{
+              "contact" | translate
+            }}</a>
+          </div>
+          <div class="my-3" *ngIf="smallScreen">
+            <a class="footerText2" href="#goals">{{ "goals" | translate }}</a>
+          </div>
+          <div class="my-3" *ngIf="smallScreen">
+            <a class="footerText2" href="#aboutCompany">{{
+              "aboutUs" | translate
+            }}</a>
+          </div>
+        </div>
+
+        <div class="col-4 d-flex justify-content-center my-2">
+          <img
+            src="assets/images/talata-logo-orginal-white 1.png"
+            alt=""
+            class="img-fluid footerImg"
+          />
+        </div>
+        <div class="col-md-12 d-flex justify-content-end mt-4">
+          <p class="footerRights">© 2024 Talata. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

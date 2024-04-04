@@ -123,7 +123,7 @@ p {
   text-decoration: none;
 }
 .itemsActive {
-  color: #fd385d;
+  color: #fd385d !important;
   font-weight: 700;
   font-size: 17px;
   margin-right: 32px;
@@ -1044,9 +1044,7 @@ textarea {
     right: 11px !important;
   }
 
-  // .footerImg {
-  //   height: 700px !important;
-  // }
+
 
   .sendCont {
     margin-left: 0;
