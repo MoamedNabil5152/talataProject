@@ -1,12 +1,15 @@
 .content {
-
-    width: 895px !important;
+  width: 895px !important;
   height: 160.11px !important;
   top: 173px !important;
   left: 104px !important;
+}
 
-
-
+.socialText {
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: "Almarai", sans-serif;
 }
 
 .footer {
@@ -32,9 +35,9 @@
   font-family: "Almarai", sans-serif;
   margin-bottom: 17px;
   text-decoration: none !important;
+  cursor: pointer;
   // display: block !important;
 }
-
 
 @media only screen and (max-width: 767px) {
   .navbar {
@@ -462,7 +465,7 @@
     height: 761px;
   }
   .footer {
-    height: 653px  !important;
+    height: 612px !important;
   }
 
   .sendText {
@@ -525,6 +528,9 @@
 
   .parentOfTexts {
     width: auto !important;
+  }
+  .footer {
+    margin-top: 130px !important;
   }
 }
 

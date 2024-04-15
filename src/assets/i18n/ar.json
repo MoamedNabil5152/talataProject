@@ -5,7 +5,7 @@
 "contact" : "Contact Us",
 "main" : "Main",
 
-"whyTalata" : "? Why Choose Talata",
+"whyTalata" : "Why Choose Talata ?",
 "expertTeam" : "Expert Team",
 "expertInfo" : "Our experienced and professional team ensures high-class shipping services, always working hard to exceed your expectations",
 "quality" : "Quality & Safety Guaranteed",
@@ -19,7 +19,7 @@
 "Benefits" : "Benefits",
 "stream" : "Streamline your supply chain",
 "streamInfo" : "Talata's reliable and cost-effective shipping solutions enable you to handle all your needs, from warehousing to last-mile delivery",
-"gift" : "? Sending a gift or moving belongings",
+"gift" : "Sending a gift or moving belongings ?",
 "giftInfo" : "Talata offers secure and convenient shipping options within Egypt, ensuring your valuables arrive safely and on time",
 
 "aboutUs" : "About Us",
@@ -76,7 +76,7 @@
 "privacy_policy": "Privacy Policy",
 "terms_and_conditions": "Terms and Conditions",
 "home": "Home",
-"why_choose_talata": "Why Choose Talata",
+"why_choose_talata": "Why Choose Talata ?",
 "advantages": "Advantages",
 "about_us": "About Us",
 "our_goals": "Our Goals",
@@ -85,20 +85,20 @@
 "send_shipment": "Send Shipment",
 "talata_logo_alt_text": "Talata Logo",
 "rights_reserved": "© 2024 Talata. All rights reserved.",
-"collectDataHead": "1- Collecting Information:",
-"collectData": "We collect personal information voluntarily provided by customers during registration or when using our logistics services. This includes name, address, phone number, email address, and shipping details.",
-"useDataHead": "2- Using Information:",
-"useData": "We use personal information to provide shipping services, fulfill customer orders, improve the quality of our services, customize the customer experience, and communicate with them about our services and offers. We ensure security to protect personal information from unauthorized access and use.",
-"protectHead": "3- Protecting Information:",
-"protect": "We maintain an appropriate level of security to protect information from unauthorized access and unauthorized changes through appropriate technical and administrative procedures.",
-"shareInfoHead": "4- Sharing Information:",
-"shareInfo": "We share personal information with authorized shipping partners and official entities only when necessary to execute shipping services and comply with local laws.",
+"collectDataHead": "1- Data Collection:",
+"collectData": "We collect personal information voluntarily provided by customers when registering or using our logistics services, including name, address, phone number, email address, and shipping details.",
+"useDataHead": "2- Data Usage:",
+"useData": "We use personal information to provide shipping services, fulfill customer orders, improve the quality of our services, customize the customer experience, and communicate with them about our services and offers.",
+"protectHead": "3- Data Protection:",
+"protect": "We maintain a high level of security to protect personal information from unauthorized access, improper use, and unauthorized alteration, through the implementation of appropriate technical and administrative procedures.",
+"shareInfoHead": "4- Information Sharing:",
+"shareInfo": "We share personal information with authorized shipping partners and official authorities only when necessary to execute shipping services and comply with local laws.",
 "likeForInfoHead": "5- Compliance with Regulations:",
-"likeForInfo": "We commit to comply with all laws and regulations related to the protection of personal data, including the Personal Data Protection Law in the Arab Republic of Egypt.",
-"rightForEmployeesHead": "6- Employee Rights:",
-"rightForEmployees": "We respect the rights of customers to access, correct, delete, and express concerns about their personal information processing.",
+"likeForInfo": "We commit to complying with all laws and regulations related to personal data protection, including the Personal Data Protection Law in the Arab Republic of Egypt.",
+"rightForEmployeesHead": "6- Customer Rights:",
+"rightForEmployees": "We respect customers' rights to access, correct, delete, and express their concerns regarding the processing of their personal information.",
 "updatesHead": "7- Privacy Policy Updates:",
-"updates": "We may update the privacy policy from time to time and will notify customers of any changes made.",
+"updates": "We may update the privacy policy from time to time, and we will notify customers of any changes made.",
 "contactWithThemHead": "8- Contact:",
 "contactWithThem": "If you have any questions or inquiries about the privacy policy, please contact us via email or phone.",
 "servicesProvided": {
@@ -107,11 +107,11 @@
 },
 "responsibilities": {
   "head": "2- Responsibilities:",
-  "content": "We commit to providing shipping services with the utmost craftsmanship and professionalism, ensuring the safety of goods and their timely arrival at their intended destination."
+  "content": "We are committed to providing shipping services with the utmost professionalism and ensuring the safety of goods and their arrival at their intended destination on time."
 },
 "paymentAndInvoices": {
   "head": "3- Payment and Invoices:",
-  "content": "Customers must pay the agreed fees for shipping services according to the specified tariff, and certified invoices will be issued for these services."
+  "content": "Customers must pay the agreed fees for shipping services according to the specified pricing, and certified invoices will be issued for these services."
 },
 "liabilityForDamage": {
   "head": "4- Liability for Damage:",
@@ -119,11 +119,11 @@
 },
 "cancellationAndRefund": {
   "head": "5- Cancellation and Refund:",
-  "content": "Customers have the right to cancel the service before the commencement of the shipping process, bearing the cancellation fees, and fees cannot be refunded after the commencement of shipping."
+  "content": "Customers have the right to cancel the service before the start of the shipping process, bearing the cancellation fees, and fees cannot be refunded after the shipping process has commenced."
 },
 "rightsAndLicenses": {
   "head": "6- Rights and Licenses:",
-  "content": "We reserve all rights and licenses related to shipping services and related intellectual property."
+  "content": "We retain all rights and licenses related to shipping services and relevant intellectual property."
 },
 "modificationOfTerms": {
   "head": "7- Modification of Terms:",
@@ -131,14 +131,22 @@
 },
 "applicableLaw": {
   "head": "8- Applicable Law:",
-  "content": "This agreement is subject to the laws of the Arab Republic of Egypt, and it shall be interpreted, enforced, and relinquished according to those laws."
+  "content": "This agreement is subject to the laws of the Arab Republic of Egypt, and its interpretation, execution, and waiver shall be governed by those laws."
 },
 "disclaimerOfShipments": {
   "head": "9- Disclaimer of Shipments:",
-  "content1": "The company reserves the right to refuse or withhold any shipment prohibited or violating regulations and laws.",
-  "content2" : "The company is not responsible for any shipment violating regulations and laws that are inspected and tracked by authorities for security reasons and seized by authorities."
+  "content1": "The company has the right to refuse or retain any shipment that is prohibited or violates regulations and laws.",
+  "content2": "The company is not responsible for any shipment that violates regulations and laws, which is inspected and traced by authorities for security reasons and confiscated by authorities."
+},
+"social" : "Follow Us On Social Media",
+"desc" : "Description is required",
+"sender" : "Sender full name is required",
+"senderMob" : "Sender mobile number is required",
+"senderAdd" : "Sender delivery address is required",
+"reciever" : "Recipient full name is required",
+"recieverMob" : "Recipient mobile number is required",
+"recieverAdd" : "Recipient delivery address is required"
 
-}
 
 
 }

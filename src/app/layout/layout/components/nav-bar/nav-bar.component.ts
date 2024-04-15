@@ -1,12 +1,21 @@
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
 import {
   AfterViewInit,
   Component,
+  DoCheck,
   ElementRef,
   QueryList,
+  Renderer2,
   ViewChildren,
 } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
@@ -17,78 +26,99 @@ declare var AOS: any;
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss'],
-
 })
-export class NavBarComponent implements AfterViewInit {
-
-  smallScreen : boolean =false ;
+export class NavBarComponent implements AfterViewInit, DoCheck {
+  smallScreen: boolean = false;
   showDiv: boolean = false;
 
-  showVictor : boolean = false
-  showLine : boolean = false
-  showHead : boolean = false
+  showVictor: boolean = false;
+  showLine: boolean = false;
+  showHead: boolean = false;
 
   activeItem: string | null = 'الرئيسية';
   currentLang: string;
-  align : any = ''
+  align: any = '';
   direction: 'ltr' | 'rtl' = 'ltr'; // Default direction is left to right
 
-
-  shipmentForm : FormGroup = new FormGroup({
+  shipmentForm: FormGroup = new FormGroup({
     shipmentData: this.fb.group({
       description: [''],
       optionalWeight: [''],
       optionalDimensions: [''],
-      notes: ['']
+      notes: [''],
     }),
     recipientData: this.fb.group({
       fullName: [''],
       mobileNumber: [''],
       optionalEmail: [''],
-      deliveryAddress: ['']
+      deliveryAddress: [''],
     }),
     senderData: this.fb.group({
       fullName: [''],
       mobileNumber: [''],
       optionalEmail: [''],
-      deliveryAddress: ['']
-    })
-  })
+      deliveryAddress: [''],
+    }),
+  });
 
-  constructor(private translate: TranslateService , private fb : FormBuilder , private userService : UsersService  ) {
+  constructor(
+    private translate: TranslateService,
+    private fb: FormBuilder,
+    private userService: UsersService,
+    private router: Router,
+    private renderer: Renderer2,
+    private elementRef: ElementRef
+  ) {
     translate.setDefaultLang('ar');
     this.currentLang = localStorage.getItem('lang') || 'ar';
     translate.use(this.currentLang);
-    this.currentLang == 'en' ? this.direction = 'ltr' : this.direction = 'rtl';
+    this.currentLang == 'en'
+      ? (this.direction = 'ltr')
+      : (this.direction = 'rtl');
+  }
+  ngDoCheck(): void {
+    if (
+      this.router.url == '/terms-conditions' ||
+      this.router.url == '/privacy-policy'
+    ) {
+      this.removeClassFromAllElements('itemsActive');
+    }
   }
 
-   toggleDiv() {
+  removeClassFromAllElements(className: string) {
+    const elements = this.elementRef.nativeElement.querySelectorAll(
+      '.' + className
+    );
+    elements.forEach((element: HTMLElement) => {
+      this.renderer.removeClass(element, className);
+    });
+  }
+  toggleDiv() {
     this.showDiv = !this.showDiv;
   }
 
-  scrollToPage(text : any ,text2? : any) {
+  scrollToPage(text: any, text2?: any) {
+    let element3: any = document.querySelectorAll('.items');
 
+    element3.forEach((item: any) => {
+      // Remove 'itemsActive' class from all elements
+      item.classList.remove('itemsActive');
 
-  let element3: any = document.querySelectorAll('.items');
+      // If the item's ID matches the provided text, add 'itemsActive' class
+      if (
+        (item.id === text && this.router.url !== '/privacy-policy') ||
+        (item.id === text && this.router.url !== '/terms-conditions')
+      ) {
+        item.classList.add('itemsActive');
+      }
+    });
 
-  element3.forEach((item: any) => {
-    // Remove 'itemsActive' class from all elements
-    item.classList.remove('itemsActive');
-
-    // If the item's ID matches the provided text, add 'itemsActive' class
-    if (item.id === text) {
-      item.classList.add('itemsActive');
-    }
-  });
-
-
-  setTimeout(() => {
-    let element: any = document.getElementById(text);
-    let element2: any = document.getElementById(text2);
-    this.userService.scollSubject.next(element);
-    element2.classList.add('itemsActive');
-  }, 100);
-
+    setTimeout(() => {
+      let element: any = document.getElementById(text);
+      let element2: any = document.getElementById(text2);
+      this.userService.scollSubject.next(element);
+      element2.classList.add('itemsActive');
+    }, 100);
 
     // setTimeout(() => {
     //   let element : any = document.getElementById(text)
@@ -99,7 +129,6 @@ export class NavBarComponent implements AfterViewInit {
     //   setTimeout
     // }, 100);
   }
-
 
   // let element: any = document.getElementById(text);
   // let element2: any = document.getElementById(text2);
@@ -115,18 +144,12 @@ export class NavBarComponent implements AfterViewInit {
   // //   }
   // // });
 
-
   // setTimeout(() => {
   //   this.userService.scollSubject.next(element);
   //   // element2.classList.add('itemsActive');
   // }, 1000);
 
-
-
-  change(text: any) {
-
-
-  }
+  change(text: any) {}
   ngAfterViewInit(): void {
     AOS.init();
 
@@ -166,11 +189,11 @@ export class NavBarComponent implements AfterViewInit {
     // Save the selected language in localStorage
     localStorage.setItem('lang', newLang);
     setTimeout(() => {
-      location.reload()
+      location.reload();
     }, 500);
   }
 
   onSaveShipment() {
-    console.log(this.shipmentForm.value)
+    console.log(this.shipmentForm.value);
   }
 }

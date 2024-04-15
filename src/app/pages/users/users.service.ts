@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from '../../interfaces';
 import { BehaviorSubject, Observable, map, of, take } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -13,6 +14,11 @@ scollSubjectObs = this.scollSubject.asObservable()
     return localStorage.getItem('lang');
   }
 
-  constructor() {}
+  submitForm(formData : any) : Observable<any> {
+   return this.http.post('http://localhost:3000/sendEmail', formData)
+
+  }
+
+  constructor(private http : HttpClient) {}
 
 }

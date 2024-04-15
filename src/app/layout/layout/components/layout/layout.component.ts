@@ -1,4 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -6,6 +7,7 @@ import { AfterViewInit, Component } from '@angular/core';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements AfterViewInit {
+  constructor(private router : Router){}
   smallScreen : boolean = false
   ngAfterViewInit(): void {
     this.detectScreenSize();
@@ -19,6 +21,21 @@ export class LayoutComponent implements AfterViewInit {
     } else {
       this.smallScreen = false;
     }
+  }
+
+  onNavigate(){
+    this.router.navigate(['/terms-conditions']);
+
+   window.scrollTo(0,0)
+
+  }
+  onPolicy(){
+
+    this.router.navigate(['/privacy-policy']);
+
+   window.scrollTo(0,0)
+
+
   }
 
 }

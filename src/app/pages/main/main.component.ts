@@ -1,7 +1,8 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { UsersService } from '../users/users.service';
+
 declare var AOS: any;
 
 @Component({
@@ -12,6 +13,9 @@ declare var AOS: any;
 export class MainComponent implements AfterViewInit , OnInit {
   smallScreen: boolean = false;
   showDiv: boolean = false;
+
+  EMAILJS_USER_ID = 'Info@talata-eg.com';
+
 
   showVictor: boolean = false;
   showLine: boolean = false;
@@ -24,22 +28,22 @@ export class MainComponent implements AfterViewInit , OnInit {
 
   shipmentForm: FormGroup = new FormGroup({
     shipmentData: this.fb.group({
-      description: [''],
+      description: ['' , Validators.required],
       optionalWeight: [''],
       optionalDimensions: [''],
       notes: [''],
     }),
     recipientData: this.fb.group({
-      fullName: [''],
-      mobileNumber: [''],
+      fullName: ['' , Validators.required],
+      mobileNumber: ['' , Validators.required],
       optionalEmail: [''],
-      deliveryAddress: [''],
+      deliveryAddress: ['' , Validators.required],
     }),
     senderData: this.fb.group({
-      fullName: [''],
-      mobileNumber: [''],
+      fullName: ['' , Validators.required],
+      mobileNumber: ['' , Validators.required],
       optionalEmail: [''],
-      deliveryAddress: [''],
+      deliveryAddress: ['' , Validators.required],
     }),
   });
 
@@ -82,8 +86,37 @@ export class MainComponent implements AfterViewInit , OnInit {
     });
   }
 
-  onScroll(text: string, yOffset?: any) {
+  scrollToPage(text: any, text2?: any) {
+    let element3: any = document.querySelectorAll('.items');
 
+    element3.forEach((item: any) => {
+      // Remove 'itemsActive' class from all elements
+      item.classList.remove('itemsActive');
+
+      // If the item's ID matches the provided text, add 'itemsActive' class
+      // if (
+      //   (item.id === text && this.router.url !== '/privacy-policy') ||
+      //   (item.id === text && this.router.url !== '/terms-conditions')
+      // ) {
+      //   item.classList.add('itemsActive');
+      // }
+    });
+
+    setTimeout(() => {
+      let element: any = document.getElementById(text);
+      let element2: any = document.getElementById(text2);
+      this.userService.scollSubject.next(element);
+      element2.classList.add('itemsActive');
+    }, 100);
+
+    // setTimeout(() => {
+    //   let element : any = document.getElementById(text)
+    //   let element2: any = document.getElementById(text2)
+
+    //   this.userService.scollSubject.next(element)
+    //   element2.classList.add('itemsActive')
+    //   setTimeout
+    // }, 100);
   }
   ngAfterViewInit(): void {
     AOS.init();
@@ -125,7 +158,11 @@ export class MainComponent implements AfterViewInit , OnInit {
     localStorage.setItem('lang', newLang);
   }
 
+
   onSaveShipment() {
-    console.log(this.shipmentForm.value);
+    console.log(this.shipmentForm.value)
+    return this.userService.submitForm(this.shipmentForm.value).subscribe(res=>{
+      console.log(res)
+    })
   }
 }

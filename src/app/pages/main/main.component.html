@@ -1,12 +1,5 @@
-
-
 <!--  -->
-<div
-  class="infoCont row"
-  id="global"
-
-
->
+<div class="infoContc row" id="global" style="overflow-x: hidden !important">
   <img src="assets/images/Hero bg.png" class="imgCont" alt="" />
   <img src="assets/images/Group.png" alt="Image 2" class="top-image" />
 
@@ -16,34 +9,52 @@
   </div>
   <div class="centered3 gap-2 d-none d-sm-none d-lg-flex">
     <div class="connectButtonCont">
-      <button class="connectButton" (click)="onScroll('contact', -200)">
+      <button
+        class="connectButton"
+        (click)="scrollToPage('contact', 'contacts')"
+      >
         {{ "contact" | translate }}
       </button>
     </div>
     <div class="">
-      <button class="sendButton" (click)="onScroll('sendShipment')">
+      <button
+        class="sendButton"
+        (click)="scrollToPage('sendShipment', 'sends')"
+      >
         {{ "SendShipment" | translate }}
       </button>
     </div>
   </div>
   <div class="centered3 gap-2 d-block d-sm-none">
     <div class="sendButtonCont">
-      <button class="sendButton" (click)="onScroll('sendShipment')">
+      <button
+        class="sendButton"
+        (click)="scrollToPage('sendShipment', 'sends')"
+      >
         {{ "SendShipment" | translate }}
       </button>
     </div>
     <div class="">
-      <button class="connectButton" (click)="onScroll('contact', 120)">
+      <button
+        class="connectButton"
+        (click)="scrollToPage('contact', 'contacts')"
+      >
         {{ "contact" | translate }}
       </button>
     </div>
   </div>
 </div>
 <!--  -->
-<div class="whyUs"  >
-  <p class="usHeader" id="us">{{ "whyTalata" | translate }}</p>
+<div class="whyUs" style="overflow-x: hidden !important">
+  <p
+    class="usHeader"
+    id="us"
+    [ngStyle]="{ direction: currentLang == 'en' ? 'rtr' : 'ltr' }"
+  >
+    {{ "whyTalata" | translate }}
+  </p>
   <div class="usImgsContainer row justify-content-center">
-    <div class="col-12 row justify-content-center" style="width: 90%;">
+    <div class="col-12 row justify-content-center" style="width: 90%">
       <div class="parent col-md-4 justify-content-center">
         <img src="assets/images/flexable.png" alt="" class="globalStyles" />
         <div style="width: 94%">
@@ -107,7 +118,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
@@ -115,8 +125,7 @@
 <div
   class="benifits"
   id="advantages"
-
-
+  style="overflow-x: hidden !important; overflow-y: hidden !important"
 >
   <p class="benefitP">{{ "Benefits" | translate }}</p>
   <div class="row justify-content-center align-items-center benCont">
@@ -126,19 +135,35 @@
 
     <div class="col-md-6">
       <div class="formMainTexts">
-        <p class="advText">{{ "stream" | translate }}</p>
-        <p class="secondAdvText" [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }">
+        <p
+          class="advText"
+          [ngStyle]="{ direction: currentLang == 'en' ? 'rtl' : 'ltr' }"
+        >
+          {{ "stream" | translate }}
+        </p>
+        <p
+          class="secondAdvText"
+          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
+        >
           {{ "streamInfo" | translate }}
         </p>
       </div>
     </div>
 
     <div class="col-md-6 d-flex justify-content-center" *ngIf="!smallScreen">
-      <div style="width: 80%">
+      <div style="width: 78%">
         <!-- Adjust width as needed -->
-        <p class="advText">{{ "gift" | translate }}</p>
+        <p
+          class="advText"
+          [ngStyle]="{ direction: currentLang == 'en' ? 'rtl' : 'ltr' }"
+        >
+          {{ "gift" | translate }}
+        </p>
         <div class="secbenCont d-flex justify-content-center">
-          <p class="secondAdvText" [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }">
+          <p
+            class="secondAdvText"
+            [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
+          >
             {{ "giftInfo" | translate }}
           </p>
         </div>
@@ -155,9 +180,17 @@
     <div class="col-md-6 d-flex justify-content-center" *ngIf="smallScreen">
       <div style="width: 100%">
         <!-- Adjust width as needed -->
-        <p class="advText">{{ "gift" | translate }}</p>
+        <p
+          class="advText"
+          [ngStyle]="{ direction: currentLang == 'en' ? 'rtl' : 'ltr' }"
+        >
+          {{ "gift" | translate }}
+        </p>
         <div class="secbenCont d-flex justify-content-center">
-          <p class="secondAdvText" [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }">
+          <p
+            class="secondAdvText"
+            [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
+          >
             {{ "giftInfo" | translate }}
           </p>
         </div>
@@ -165,14 +198,17 @@
     </div>
   </div>
 
-  <div
-    class="d-flex justify-content-center benefitCont2 gap-2"
-    *ngIf="smallScreen"
-  >
-    <button class="sendButtonBen" (click)="onScroll('sendShipment')">
+  <div class="d-flex justify-content-center benefitCont2 gap-2">
+    <button
+      class="sendButtonBen"
+      (click)="scrollToPage('sendShipment', 'sends')"
+    >
       {{ "SendShipment" | translate }}
     </button>
-    <button class="connectButtonSpecial" (click)="onScroll('contact')">
+    <button
+      class="connectButtonSpecial"
+      (click)="scrollToPage('contact', 'contacts')"
+    >
       {{ "contact" | translate }}
     </button>
   </div>
@@ -181,8 +217,7 @@
 <div
   class="aboutCompany"
   id="aboutCompany"
-
-
+  style="overflow-x: hidden !important"
 >
   <img src="assets/images/about.png" class="w-100 main" alt="" />
   <p class="centeredAboutCompany">{{ "aboutUs" | translate }}</p>
@@ -207,21 +242,21 @@
   </div>
 </div>
 <!--  -->
-<div class="ourGorls">
+<div class="ourGorls" style="overflow-x: hidden !important">
   <p class="gloadP" id="goals">{{ "goals" | translate }}</p>
-  <div
-    class="goalsContainer row justify-content-end"
-
-
-  >
+  <div class="goalsContainer row justify-content-start">
     <div
       class="col-md-6 gloalsTexts"
       style="height: 57px; text-align: right; margin-bottom: 73px"
       [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
     >
-      <div class="d-flex align-items-center gap-2 justify-content-end">
-        <p class="goalsItems">{{ "qualityFirstHead" | translate }}</p>
+      <div
+        class="d-flex align-items-center gap-2"
+        [ngStyle]="{ direction: currentLang == 'en' ? 'rtl' : 'ltr' }"
+      >
         <img class="vector" src="assets/images/Vector (1).png" alt="" />
+
+        <p class="goalsItems">{{ "qualityFirstHead" | translate }}</p>
       </div>
       <div>
         <p class="goalsTexts">{{ "qualityFirst" | translate }}</p>
@@ -233,9 +268,13 @@
       style="height: 57px; text-align: right; margin-bottom: 73px"
       [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
     >
-      <div class="d-flex align-items-center gap-2 justify-content-end">
-        <p class="goalsItems">{{ "growHead" | translate }}</p>
+      <div
+        class="d-flex align-items-center gap-2"
+        [ngStyle]="{ direction: currentLang == 'en' ? 'rtl' : 'ltr' }"
+      >
         <img class="vector" src="assets/images/Vector (1).png" alt="" />
+
+        <p class="goalsItems">{{ "growHead" | translate }}</p>
       </div>
       <div>
         <p class="goalsTexts">
@@ -249,9 +288,13 @@
       style="height: 57px; text-align: right; margin-bottom: 73px"
       [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
     >
-      <div class="d-flex align-items-center gap-2 justify-content-end">
-        <p class="goalsItems">{{ "adaptHead" | translate }}</p>
+      <div
+        class="d-flex align-items-center gap-2"
+        [ngStyle]="{ direction: currentLang == 'en' ? 'rtl' : 'ltr' }"
+      >
         <img class="vector" src="assets/images/Vector (1).png" alt="" />
+
+        <p class="goalsItems">{{ "adaptHead" | translate }}</p>
       </div>
       <div>
         <p class="goalsTexts">{{ "growTogether" | translate }}</p>
@@ -263,9 +306,13 @@
       style="height: 57px; text-align: right; margin-bottom: 73px"
       [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
     >
-      <div class="d-flex align-items-center gap-2 justify-content-end">
-        <p class="goalsItems">{{ "adaptHead" | translate }}</p>
+      <div
+        class="d-flex align-items-center gap-2"
+        [ngStyle]="{ direction: currentLang == 'en' ? 'rtl' : 'ltr' }"
+      >
         <img class="vector" src="assets/images/Vector (1).png" alt="" />
+
+        <p class="goalsItems">{{ "adaptHead" | translate }}</p>
       </div>
       <div>
         <p class="goalsTexts">
@@ -279,9 +326,13 @@
       style="height: 57px; text-align: right; margin-bottom: 73px"
       [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
     >
-      <div class="d-flex align-items-center gap-2 justify-content-end">
-        <p class="goalsItems">{{ "trustHead" | translate }}</p>
+      <div
+        class="d-flex align-items-center gap-2"
+        [ngStyle]="{ direction: currentLang == 'en' ? 'rtl' : 'ltr' }"
+      >
         <img class="vector" src="assets/images/Vector (1).png" alt="" />
+
+        <p class="goalsItems">{{ "trustHead" | translate }}</p>
       </div>
       <div>
         <p class="goalsTexts">
@@ -296,23 +347,32 @@
       style="height: 57px; text-align: right; margin-bottom: 73px"
       [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
     >
-      <div class="d-flex align-items-center gap-2 justify-content-end">
-        <p class="goalsItems">{{ "solutionsHead" | translate }}</p>
+      <div
+        class="d-flex align-items-center gap-2"
+        [ngStyle]="{ direction: currentLang == 'en' ? 'rtl' : 'ltr' }"
+      >
         <img class="vector" src="assets/images/Vector (1).png" alt="" />
+
+        <p class="goalsItems">{{ "solutionsHead" | translate }}</p>
       </div>
       <div>
         <p class="goalsTexts">{{ "solutions" | translate }}</p>
       </div>
     </div>
     <!--  -->
+    <div class="col-md-6" *ngIf="currentLang == 'en'"></div>
     <div
       class="col-md-6 gloalsTexts"
       style="height: 57px; text-align: right; margin-bottom: 73px"
       [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
     >
-      <div class="d-flex align-items-center gap-2 justify-content-end">
-        <p class="goalsItems">{{ "reachMoreHead" | translate }}</p>
+      <div
+        class="d-flex align-items-center gap-2"
+        [ngStyle]="{ direction: currentLang == 'en' ? 'rtl' : 'ltr' }"
+      >
         <img class="vector" src="assets/images/Vector (1).png" alt="" />
+
+        <p class="goalsItems">{{ "reachMoreHead" | translate }}</p>
       </div>
       <div>
         <p class="goalsTexts">{{ "reachMore" | translate }}</p>
@@ -322,15 +382,13 @@
   </div>
 </div>
 
-<div
-  id="areas"
-
-
-  style="padding: 0 20px"
->
+<div id="areas" style="padding: 0 20px" style="overflow-x: hidden !important">
   <p class="serviceP">{{ "places" | translate }}</p>
 
-  <div class="areasContainer">
+  <div
+    class="areasContainer"
+    [ngStyle]="{ direction: currentLang == 'en' ? 'rtl' : 'ltr' }"
+  >
     <div class="d-flex align-items-center textsCont">
       <p class="areasText">{{ "al_rehab" | translate }}</p>
       <img src="assets/images/basil_map-location-solid.png" alt="" />
@@ -432,167 +490,160 @@
   />
 </div>
 
-<div class="contact" id="contact"  >
+<div class="contact" id="contact" style="overflow-x: hidden !important">
   <p class="sendText">{{ "contact" | translate }}</p>
 
   <!--  -->
   <div class="row mt-4 justify-content-center" *ngIf="currentLang == 'en'">
-    <div class="col-12 row justify-content-center" style="width: 95%;">
-      <div class="col-md-4 my-2" >
+    <div class="col-12 row justify-content-center" style="width: 95%">
+      <div class="col-md-4 my-2">
         <div
-        class="contactDiv  d-flex justify-content-center align-items-center gap-2"
-        (mouseenter)="showHead = true"
-        (mouseleave)="showHead = false"
-      >
-        <p class="contactText" [ngStyle]="{ 'text-align': 'end' }">
-          +2 0111 0222 620 / 0222664199
-        </p>
-        <img
-          src="assets/images/Vectorr.png"
-          alt=""
-          class="contactImgs"
-          *ngIf="!showHead"
-        />
-        <img
-          src="assets/images/VectorW.png"
-          alt=""
-          class="contactImgs"
-          *ngIf="showHead"
-        />
-      </div>
+          class="contactDiv d-flex justify-content-center align-items-center gap-2"
+          (mouseenter)="showHead = true"
+          (mouseleave)="showHead = false"
+        >
+          <p class="contactText" [ngStyle]="{ 'text-align': 'end' }">
+            +2 0111 0222 620 / 0222664199
+          </p>
+          <img
+            src="assets/images/Vectorr.png"
+            alt=""
+            class="contactImgs"
+            *ngIf="!showHead"
+          />
+          <img
+            src="assets/images/VectorW.png"
+            alt=""
+            class="contactImgs"
+            *ngIf="showHead"
+          />
+        </div>
       </div>
       <div class="col-md-4 my-2">
         <div
-        class="contactDiv  d-flex justify-content-center align-items-center gap-2"
-        (mouseenter)="showLine = true"
-        (mouseleave)="showLine = false"
-      >
-        <p class="contactText" [ngStyle]="{ 'text-align': 'end' }">
-          info@talata-eg.com
-        </p>
-        <img
-          src="assets/images/line-md_email.png"
-          alt=""
-          class="contactImgs"
-          *ngIf="!showLine"
-        />
-        <img
-          src="assets/images/line-md_emailw.png"
-          alt=""
-          class="contactImgs"
-          *ngIf="showLine"
-        />
-      </div>
+          class="contactDiv d-flex justify-content-center align-items-center gap-2"
+          (mouseenter)="showLine = true"
+          (mouseleave)="showLine = false"
+        >
+          <p class="contactText" [ngStyle]="{ 'text-align': 'end' }">
+            info@talata-eg.com
+          </p>
+          <img
+            src="assets/images/line-md_email.png"
+            alt=""
+            class="contactImgs"
+            *ngIf="!showLine"
+          />
+          <img
+            src="assets/images/line-md_emailw.png"
+            alt=""
+            class="contactImgs"
+            *ngIf="showLine"
+          />
+        </div>
       </div>
 
       <div class="col-md-4 my-2">
-         <div
-        class="contactDiv  d-flex justify-content-center align-items-center gap-2"
-        (mouseenter)="showVictor = true"
-        (mouseleave)="showVictor = false"
-      >
-        <p class="contactText" style="direction: rtl; text-align: start">
-          {{ "address" | translate }}
-        </p>
-        <img
-          src="assets/images/Vector.png"
-          alt=""
-          class="contactImgs"
-          *ngIf="!showVictor"
-        />
-        <img
-          src="assets/images/Vectorrr.png"
-          alt=""
-          class="contactImgs"
-          *ngIf="showVictor"
-        />
-      </div>
+        <div
+          class="contactDiv d-flex justify-content-center align-items-center gap-2"
+          (mouseenter)="showVictor = true"
+          (mouseleave)="showVictor = false"
+        >
+          <p class="contactText" style="direction: rtl; text-align: start">
+            {{ "address" | translate }}
+          </p>
+          <img
+            src="assets/images/Vector.png"
+            alt=""
+            class="contactImgs"
+            *ngIf="!showVictor"
+          />
+          <img
+            src="assets/images/Vectorrr.png"
+            alt=""
+            class="contactImgs"
+            *ngIf="showVictor"
+          />
+        </div>
       </div>
     </div>
-
-
-
   </div>
   <div class="row mt-4 justify-content-center" *ngIf="currentLang == 'ar'">
-    <div class="col-12 row justify-content-center" style="width: 95%;">
-
-    <div class="col-md-4 my-2">
-      <div
-        class="contactDiv d-flex justify-content-center align-items-center gap-2"
-        (mouseenter)="showVictor = true"
-        (mouseleave)="showVictor = false"
-      >
-
-        <img
-          src="assets/images/Vector.png"
-          alt=""
-          class="contactImgs"
-          *ngIf="!showVictor"
-        />
-        <img
-          src="assets/images/Vectorrr.png"
-          alt=""
-          class="contactImgs"
-          *ngIf="showVictor"
-        />
-        <p class="contactText" style="direction: ltr; text-align: start">
-          {{ "address" | translate }}
-        </p>
+    <div class="col-12 row justify-content-center" style="width: 95%">
+      <div class="col-md-4 my-2">
+        <div
+          class="contactDiv d-flex justify-content-center align-items-center gap-2"
+          (mouseenter)="showVictor = true"
+          (mouseleave)="showVictor = false"
+        >
+          <img
+            src="assets/images/Vector.png"
+            alt=""
+            class="contactImgs"
+            *ngIf="!showVictor"
+          />
+          <img
+            src="assets/images/Vectorrr.png"
+            alt=""
+            class="contactImgs"
+            *ngIf="showVictor"
+          />
+          <p class="contactText" style="direction: ltr; text-align: start">
+            {{ "address" | translate }}
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="col-md-4 my-2">
-      <div
-        class="contactDiv d-flex justify-content-center align-items-center gap-2"
-        (mouseenter)="showLine = true"
-        (mouseleave)="showLine = false"
-      >
-
-        <img
-          src="assets/images/line-md_email.png"
-          alt=""
-          class="contactImgs"
-          *ngIf="!showLine"
-        />
-        <img
-          src="assets/images/line-md_emailw.png"
-          alt=""
-          class="contactImgs"
-          *ngIf="showLine"
-        />
-        <p class="contactText" [ngStyle]="{ 'text-align': 'end' }">
-          info@talata-eg.com
-        </p>
+      <div class="col-md-4 my-2">
+        <div
+          class="contactDiv d-flex justify-content-center align-items-center gap-2"
+          (mouseenter)="showLine = true"
+          (mouseleave)="showLine = false"
+        >
+          <img
+            src="assets/images/line-md_email.png"
+            alt=""
+            class="contactImgs"
+            *ngIf="!showLine"
+          />
+          <img
+            src="assets/images/line-md_emailw.png"
+            alt=""
+            class="contactImgs"
+            *ngIf="showLine"
+          />
+          <p class="contactText" [ngStyle]="{ 'text-align': 'end' }">
+            info@talata-eg.com
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="col-md-4 my-2">
-      <div
-        class="contactDiv d-flex justify-content-center align-items-center gap-2"
-        (mouseenter)="showHead = true"
-        (mouseleave)="showHead = false"
-      >
-
-        <img
-          src="assets/images/Vectorr.png"
-          alt=""
-          class="contactImgs"
-          *ngIf="!showHead"
-        />
-        <img
-          src="assets/images/VectorW.png"
-          alt=""
-          class="contactImgs"
-          *ngIf="showHead"
-        />
-        <p
-        class="contactText"
-        [ngStyle]="{ 'text-align': 'end', direction: 'ltr' }"
-      >
-        +2 0111 0222 620 / 0222664199
-      </p>
+      <div class="col-md-4 my-2">
+        <div
+          class="contactDiv d-flex justify-content-center align-items-center gap-2"
+          (mouseenter)="showHead = true"
+          (mouseleave)="showHead = false"
+        >
+          <img
+            src="assets/images/Vectorr.png"
+            alt=""
+            class="contactImgs"
+            *ngIf="!showHead"
+          />
+          <img
+            src="assets/images/VectorW.png"
+            alt=""
+            class="contactImgs"
+            *ngIf="showHead"
+          />
+          <p
+            class="contactText"
+            [ngStyle]="{ 'text-align': 'end', direction: 'ltr' }"
+          >
+            +2 0111 0222 620 / 0222664199
+          </p>
+        </div>
       </div>
-    </div>
     </div>
   </div>
   <!--  -->
@@ -601,8 +652,7 @@
 <div
   class="sendShipment w-100"
   id="sendShipment"
-
-
+  style="overflow-x: hidden !important"
 >
   <p class="sendText">{{ "SendShipment" | translate }}</p>
 
@@ -611,12 +661,26 @@
       <!-- Shipment Data -->
       <div class="col-lg-4" formGroupName="shipmentData" *ngIf="!smallScreen">
         <div class="sendCont">
-          <p class="headersSent">{{ "shipment_data" | translate }}</p>
+          <p
+            class="headersSent"
+            [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+          >
+            {{ "shipment_data" | translate }}
+          </p>
           <input
             type="text"
             placeholder="{{ 'description' | translate }}"
             formControlName="description"
           />
+          <div class="text-danger"
+          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
+            *ngIf="
+              shipmentForm.get('shipmentData.description')?.invalid &&
+              shipmentForm.get('shipmentData.description')?.touched
+            "
+          >
+            {{"desc" | translate}}
+          </div>
         </div>
 
         <div class="sendCont">
@@ -644,12 +708,26 @@
       </div>
       <div class="col-lg-4" formGroupName="senderData" *ngIf="smallScreen">
         <div class="sendCont">
-          <p class="headersSent">{{ "sender_data" | translate }}</p>
+          <p
+            class="headersSent"
+            [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+          >
+            {{ "sender_data" | translate }}
+          </p>
           <input
             type="text"
             placeholder="{{ 'full_name' | translate }}"
             formControlName="fullName"
           />
+          <div class="text-danger"
+          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
+            *ngIf="
+              shipmentForm.get('senderData.fullName')?.invalid &&
+              shipmentForm.get('senderData.fullName')?.touched
+            "
+          >
+            {{"sender" | translate}}
+          </div>
         </div>
 
         <div class="sendCont">
@@ -658,6 +736,15 @@
             placeholder="{{ 'mobile_number' | translate }}"
             formControlName="mobileNumber"
           />
+          <div class="text-danger"
+          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
+            *ngIf="
+              shipmentForm.get('senderData.mobileNumber')?.invalid &&
+              shipmentForm.get('senderData.mobileNumber')?.touched
+            "
+          >
+            {{"senderMob" | translate}}
+          </div>
         </div>
 
         <div class="sendCont">
@@ -666,6 +753,15 @@
             placeholder="{{ 'optional_email' | translate }}"
             formControlName="optionalEmail"
           />
+          <div class="text-danger"
+          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
+            *ngIf="
+              shipmentForm.get('senderData.deliveryAddress')?.invalid &&
+              shipmentForm.get('senderData.deliveryAddress')?.touched
+            "
+          >
+            {{'senderAdd' | translate}}
+          </div>
         </div>
 
         <div class="sendCont">
@@ -678,12 +774,26 @@
       <!-- Recipient Data -->
       <div class="col-lg-4" formGroupName="recipientData">
         <div class="sendCont">
-          <p class="headersSent">{{ "recipient_data" | translate }}</p>
+          <p
+            class="headersSent"
+            [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+          >
+            {{ "recipient_data" | translate }}
+          </p>
           <input
             type="text"
             placeholder="{{ 'full_name' | translate }}"
             formControlName="fullName"
           />
+          <div class="text-danger"
+          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
+            *ngIf="
+              shipmentForm.get('recipientData.fullName')?.invalid &&
+              shipmentForm.get('recipientData.fullName')?.touched
+            "
+          >
+           {{'reciever' | translate}}
+          </div>
         </div>
 
         <div class="sendCont">
@@ -692,6 +802,15 @@
             placeholder="{{ 'mobile_number' | translate }}"
             formControlName="mobileNumber"
           />
+          <div class="text-danger"
+          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
+            *ngIf="
+              shipmentForm.get('recipientData.mobileNumber')?.invalid &&
+              shipmentForm.get('recipientData.mobileNumber')?.touched
+            "
+          >
+            {{'recieverMob' | translate}}
+          </div>
         </div>
 
         <div class="sendCont">
@@ -707,18 +826,41 @@
             placeholder="{{ 'delivery_address' | translate }}"
             formControlName="deliveryAddress"
           ></textarea>
+          <div class="text-danger"
+          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
+            *ngIf="
+              shipmentForm.get('recipientData.deliveryAddress')?.invalid &&
+              shipmentForm.get('recipientData.deliveryAddress')?.touched
+            "
+          >
+            {{'recieverAdd' | translate}}
+          </div>
         </div>
       </div>
 
       <!-- Sender Data -->
       <div class="col-lg-4" formGroupName="senderData" *ngIf="!smallScreen">
         <div class="sendCont">
-          <p class="headersSent">{{ "sender_data" | translate }}</p>
+          <p
+            class="headersSent"
+            [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+          >
+            {{ "sender_data" | translate }}
+          </p>
           <input
             type="text"
             placeholder="{{ 'full_name' | translate }}"
             formControlName="fullName"
           />
+          <div class="text-danger"
+          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
+            *ngIf="
+              shipmentForm.get('senderData.fullName')?.invalid &&
+              shipmentForm.get('senderData.fullName')?.touched
+            "
+          >
+            {{"sender" | translate}}
+          </div>
         </div>
 
         <div class="sendCont">
@@ -727,6 +869,15 @@
             placeholder="{{ 'mobile_number' | translate }}"
             formControlName="mobileNumber"
           />
+          <div class="text-danger"
+          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
+            *ngIf="
+              shipmentForm.get('senderData.mobileNumber')?.invalid &&
+              shipmentForm.get('senderData.mobileNumber')?.touched
+            "
+          >
+            {{"senderMob" | translate}}
+          </div>
         </div>
 
         <div class="sendCont">
@@ -742,16 +893,29 @@
             placeholder="{{ 'delivery_address' | translate }}"
             formControlName="deliveryAddress"
           ></textarea>
+          <div class="text-danger"
+          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
+           *ngIf="shipmentForm.get('senderData.deliveryAddress')?.invalid && shipmentForm.get('senderData.deliveryAddress')?.touched">
+            {{'senderAdd' | translate}}
+          </div>
         </div>
       </div>
       <div class="col-lg-4" formGroupName="shipmentData" *ngIf="smallScreen">
         <div class="sendCont">
-          <p class="headersSent">{{ "shipment_data" | translate }}</p>
+          <p
+            class="headersSent"
+            [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
+          >
+            {{ "shipment_data" | translate }}
+          </p>
           <input
             type="text"
             placeholder="{{ 'description' | translate }}"
             formControlName="description"
           />
+          <div *ngIf="shipmentForm.get('shipmentData.description')?.invalid && shipmentForm.get('shipmentData.description')?.touched">
+            {{"decs" | translate}}
+          </div>
         </div>
 
         <div class="sendCont">
@@ -779,7 +943,7 @@
       </div>
 
       <div class="my-2">
-        <button class="sendButton" type="submit" (click)="onSaveShipment()">
+        <button class="sendButton" type="submit" (click)="onSaveShipment()" [disabled]="!shipmentForm.valid">
           {{ "sendOrder" | translate }}
         </button>
       </div>
