@@ -11,6 +11,11 @@ p {
   margin: 0;
 }
 
+.sendButton:disabled {
+  background-color: #ddd !important  ;
+}
+
+
 .sendButtonBen {
   background-color: #fd385d;
   font-weight: 800;
@@ -724,6 +729,9 @@ textarea {
     color: #fd385d;
     cursor: pointer;
   }
+  .sendButton:disabled {
+    background-color: #ddd !important  ;
+  }
 
   .connectButton:hover{
     width: 174px;
@@ -1237,6 +1245,9 @@ textarea {
     /* For example: */
     height: 1205px;
   }
+  .sendButton:disabled {
+    background-color: #ddd !important  ;
+  }
 
   .benefitCont {
     margin-top: 40px;
@@ -1330,6 +1341,9 @@ textarea {
     font-family: "Almarai", sans-serif;
     font-size: 73px !important;
     text-align: center;
+  }
+  .sendButton:disabled {
+    background-color: #ddd !important  ;
   }
   .centered2 {
     position: absolute;

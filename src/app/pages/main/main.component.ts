@@ -2,8 +2,11 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { UsersService } from '../users/users.service';
+import emailjs from 'emailjs-com';
+import { ToastrService } from 'ngx-toastr';
 
 declare var AOS: any;
+declare let Email: any; // Declare Email global variable from SMTPJS
 
 @Component({
   selector: 'app-main',
@@ -47,7 +50,7 @@ export class MainComponent implements AfterViewInit , OnInit {
     }),
   });
 
-  constructor(private translate: TranslateService, private fb: FormBuilder , private userService : UsersService) {
+  constructor(private translate: TranslateService, private fb: FormBuilder , private userService : UsersService , private toaster : ToastrService) {
     translate.setDefaultLang('ar');
     this.currentLang = localStorage.getItem('lang') || 'ar';
     translate.use(this.currentLang);
@@ -158,11 +161,47 @@ export class MainComponent implements AfterViewInit , OnInit {
     localStorage.setItem('lang', newLang);
   }
 
+  sendEmail(formData: any) {
+    const templateParams = {
+      // Recipient and Sender Names
+      to_name: formData.recipientData.fullName,
+      from_name: formData.senderData.fullName,
+
+      // Message Content
+      message: `
+        Description: ${formData.shipmentData.description}
+        Optional Weight: ${formData.shipmentData.optionalWeight}
+        Optional Dimensions: ${formData.shipmentData.optionalDimensions}
+        Notes: ${formData.shipmentData.notes}
+
+        Recipient Full Name: ${formData.recipientData.fullName}
+        Recipient Mobile Number: ${formData.recipientData.mobileNumber}
+        Recipient Optional Email: ${formData.recipientData.optionalEmail}
+        Recipient Delivery Address: ${formData.recipientData.deliveryAddress}
+
+        Sender Full Name: ${formData.senderData.fullName}
+        Sender Mobile Number: ${formData.senderData.mobileNumber}
+        Sender Optional Email: ${formData.senderData.optionalEmail}
+        Sender Delivery Address: ${formData.senderData.deliveryAddress}
+      `,
+    };
+
+
+    emailjs.send('service_ggck1fg', 'template_1r0w6or', templateParams, 'wnDNABgr-Z63S68sc')
+      .then((response) => {
+        // console.log('Email sent successfully!', response);
+        this.toaster.success('Email sent successfully!')
+        this.shipmentForm.reset()
+      }, (error) => {
+        console.error('Email sending failed:', error);
+        this.toaster.success('Email sending failed!')
+      });
+  }
+
 
   onSaveShipment() {
-    console.log(this.shipmentForm.value)
-    return this.userService.submitForm(this.shipmentForm.value).subscribe(res=>{
-      console.log(res)
-    })
+    console.log('yesss')
+    const formValue = this.shipmentForm.value;
+    this.sendEmail(formValue);
   }
 }

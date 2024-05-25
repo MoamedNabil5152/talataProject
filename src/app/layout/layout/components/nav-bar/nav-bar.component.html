@@ -10,11 +10,12 @@
       <a class="items" id="en" (click)="switchLanguage()">
         {{ currentLang == "en" ? "EN" : "عربي" }}</a
       >
+        <a href="https://sys.talata-eg.com/client/login.aspx" class="itemsLog">{{ "login" | translate }}</a>
       <a
         class="items"
         id="sends"
         style="width: auto"
-        [routerLink]="['/']" 
+        [routerLink]="['/']"
         (click)="scrollToPage('sendShipment' , 'sends')"
         >{{ "SendShipment" | translate }}</a
       >
@@ -116,6 +117,12 @@
         *ngIf="showDiv"
       >
         <div class="myDiv">
+          <div class="mb-2">
+            <a href="https://sys.talata-eg.com/client/login.aspx" class="itemsLog"  style="width: auto">{{ "login" | translate }}</a>
+
+          </div>
+          <hr />
+
           <div>
             <a
               class="itemsMob"

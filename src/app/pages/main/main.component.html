@@ -17,22 +17,30 @@
       </button>
     </div>
     <div class="">
-      <button
+
+      <a href="https://sys.talata-eg.com/client/login.aspx">
+        <button
         class="sendButton"
-        (click)="scrollToPage('sendShipment', 'sends')"
+
       >
-        {{ "SendShipment" | translate }}
-      </button>
+      {{ "SendShipment" | translate }}
+    </button>
+      </a>
+
     </div>
   </div>
   <div class="centered3 gap-2 d-block d-sm-none">
     <div class="sendButtonCont">
-      <button
+
+      <a href="https://sys.talata-eg.com/client/login.aspx">
+        <button
         class="sendButton"
-        (click)="scrollToPage('sendShipment', 'sends')"
+
       >
-        {{ "SendShipment" | translate }}
-      </button>
+      {{ "SendShipment" | translate }}
+    </button>
+      </a>
+
     </div>
     <div class="">
       <button
@@ -199,12 +207,16 @@
   </div>
 
   <div class="d-flex justify-content-center benefitCont2 gap-2">
-    <button
+
+    <a href="https://sys.talata-eg.com/client/login.aspx">
+      <button
       class="sendButtonBen"
-      (click)="scrollToPage('sendShipment', 'sends')"
+
     >
-      {{ "SendShipment" | translate }}
-    </button>
+    {{ "SendShipment" | translate }}
+  </button>
+    </a>
+
     <button
       class="connectButtonSpecial"
       (click)="scrollToPage('contact', 'contacts')"
@@ -649,304 +661,4 @@
   <!--  -->
 </div>
 
-<div
-  class="sendShipment w-100"
-  id="sendShipment"
-  style="overflow-x: hidden !important"
->
-  <p class="sendText">{{ "SendShipment" | translate }}</p>
 
-  <ng-container [formGroup]="shipmentForm">
-    <div class="inputsContainer row">
-      <!-- Shipment Data -->
-      <div class="col-lg-4" formGroupName="shipmentData" *ngIf="!smallScreen">
-        <div class="sendCont">
-          <p
-            class="headersSent"
-            [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
-          >
-            {{ "shipment_data" | translate }}
-          </p>
-          <input
-            type="text"
-            placeholder="{{ 'description' | translate }}"
-            formControlName="description"
-          />
-          <div class="text-danger"
-          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
-            *ngIf="
-              shipmentForm.get('shipmentData.description')?.invalid &&
-              shipmentForm.get('shipmentData.description')?.touched
-            "
-          >
-            {{"desc" | translate}}
-          </div>
-        </div>
-
-        <div class="sendCont">
-          <input
-            type="text"
-            placeholder="{{ 'optional_weight' | translate }}"
-            formControlName="optionalWeight"
-          />
-        </div>
-
-        <div class="sendCont">
-          <input
-            type="text"
-            placeholder="{{ 'optional_dimensions' | translate }}"
-            formControlName="optionalDimensions"
-          />
-        </div>
-
-        <div class="sendCont">
-          <textarea
-            placeholder="{{ 'notes' | translate }}"
-            formControlName="notes"
-          ></textarea>
-        </div>
-      </div>
-      <div class="col-lg-4" formGroupName="senderData" *ngIf="smallScreen">
-        <div class="sendCont">
-          <p
-            class="headersSent"
-            [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
-          >
-            {{ "sender_data" | translate }}
-          </p>
-          <input
-            type="text"
-            placeholder="{{ 'full_name' | translate }}"
-            formControlName="fullName"
-          />
-          <div class="text-danger"
-          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
-            *ngIf="
-              shipmentForm.get('senderData.fullName')?.invalid &&
-              shipmentForm.get('senderData.fullName')?.touched
-            "
-          >
-            {{"sender" | translate}}
-          </div>
-        </div>
-
-        <div class="sendCont">
-          <input
-            type="text"
-            placeholder="{{ 'mobile_number' | translate }}"
-            formControlName="mobileNumber"
-          />
-          <div class="text-danger"
-          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
-            *ngIf="
-              shipmentForm.get('senderData.mobileNumber')?.invalid &&
-              shipmentForm.get('senderData.mobileNumber')?.touched
-            "
-          >
-            {{"senderMob" | translate}}
-          </div>
-        </div>
-
-        <div class="sendCont">
-          <input
-            type="text"
-            placeholder="{{ 'optional_email' | translate }}"
-            formControlName="optionalEmail"
-          />
-          <div class="text-danger"
-          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
-            *ngIf="
-              shipmentForm.get('senderData.deliveryAddress')?.invalid &&
-              shipmentForm.get('senderData.deliveryAddress')?.touched
-            "
-          >
-            {{'senderAdd' | translate}}
-          </div>
-        </div>
-
-        <div class="sendCont">
-          <textarea
-            placeholder="{{ 'delivery_address' | translate }}"
-            formControlName="deliveryAddress"
-          ></textarea>
-        </div>
-      </div>
-      <!-- Recipient Data -->
-      <div class="col-lg-4" formGroupName="recipientData">
-        <div class="sendCont">
-          <p
-            class="headersSent"
-            [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
-          >
-            {{ "recipient_data" | translate }}
-          </p>
-          <input
-            type="text"
-            placeholder="{{ 'full_name' | translate }}"
-            formControlName="fullName"
-          />
-          <div class="text-danger"
-          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
-            *ngIf="
-              shipmentForm.get('recipientData.fullName')?.invalid &&
-              shipmentForm.get('recipientData.fullName')?.touched
-            "
-          >
-           {{'reciever' | translate}}
-          </div>
-        </div>
-
-        <div class="sendCont">
-          <input
-            type="text"
-            placeholder="{{ 'mobile_number' | translate }}"
-            formControlName="mobileNumber"
-          />
-          <div class="text-danger"
-          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
-            *ngIf="
-              shipmentForm.get('recipientData.mobileNumber')?.invalid &&
-              shipmentForm.get('recipientData.mobileNumber')?.touched
-            "
-          >
-            {{'recieverMob' | translate}}
-          </div>
-        </div>
-
-        <div class="sendCont">
-          <input
-            type="text"
-            placeholder="{{ 'optional_email' | translate }}"
-            formControlName="optionalEmail"
-          />
-        </div>
-
-        <div class="sendCont">
-          <textarea
-            placeholder="{{ 'delivery_address' | translate }}"
-            formControlName="deliveryAddress"
-          ></textarea>
-          <div class="text-danger"
-          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
-            *ngIf="
-              shipmentForm.get('recipientData.deliveryAddress')?.invalid &&
-              shipmentForm.get('recipientData.deliveryAddress')?.touched
-            "
-          >
-            {{'recieverAdd' | translate}}
-          </div>
-        </div>
-      </div>
-
-      <!-- Sender Data -->
-      <div class="col-lg-4" formGroupName="senderData" *ngIf="!smallScreen">
-        <div class="sendCont">
-          <p
-            class="headersSent"
-            [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
-          >
-            {{ "sender_data" | translate }}
-          </p>
-          <input
-            type="text"
-            placeholder="{{ 'full_name' | translate }}"
-            formControlName="fullName"
-          />
-          <div class="text-danger"
-          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
-            *ngIf="
-              shipmentForm.get('senderData.fullName')?.invalid &&
-              shipmentForm.get('senderData.fullName')?.touched
-            "
-          >
-            {{"sender" | translate}}
-          </div>
-        </div>
-
-        <div class="sendCont">
-          <input
-            type="text"
-            placeholder="{{ 'mobile_number' | translate }}"
-            formControlName="mobileNumber"
-          />
-          <div class="text-danger"
-          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
-            *ngIf="
-              shipmentForm.get('senderData.mobileNumber')?.invalid &&
-              shipmentForm.get('senderData.mobileNumber')?.touched
-            "
-          >
-            {{"senderMob" | translate}}
-          </div>
-        </div>
-
-        <div class="sendCont">
-          <input
-            type="text"
-            placeholder="{{ 'optional_email' | translate }}"
-            formControlName="optionalEmail"
-          />
-        </div>
-
-        <div class="sendCont">
-          <textarea
-            placeholder="{{ 'delivery_address' | translate }}"
-            formControlName="deliveryAddress"
-          ></textarea>
-          <div class="text-danger"
-          [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'start' : 'end' }"
-           *ngIf="shipmentForm.get('senderData.deliveryAddress')?.invalid && shipmentForm.get('senderData.deliveryAddress')?.touched">
-            {{'senderAdd' | translate}}
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4" formGroupName="shipmentData" *ngIf="smallScreen">
-        <div class="sendCont">
-          <p
-            class="headersSent"
-            [ngStyle]="{ 'text-align': currentLang == 'ar' ? 'left' : 'right' }"
-          >
-            {{ "shipment_data" | translate }}
-          </p>
-          <input
-            type="text"
-            placeholder="{{ 'description' | translate }}"
-            formControlName="description"
-          />
-          <div *ngIf="shipmentForm.get('shipmentData.description')?.invalid && shipmentForm.get('shipmentData.description')?.touched">
-            {{"decs" | translate}}
-          </div>
-        </div>
-
-        <div class="sendCont">
-          <input
-            type="text"
-            placeholder="{{ 'optional_weight' | translate }}"
-            formControlName="optionalWeight"
-          />
-        </div>
-
-        <div class="sendCont">
-          <input
-            type="text"
-            placeholder="{{ 'optional_dimensions' | translate }}"
-            formControlName="optionalDimensions"
-          />
-        </div>
-
-        <div class="sendCont">
-          <textarea
-            placeholder="{{ 'notes' | translate }}"
-            formControlName="notes"
-          ></textarea>
-        </div>
-      </div>
-
-      <div class="my-2">
-        <button class="sendButton" type="submit" (click)="onSaveShipment()" [disabled]="!shipmentForm.valid">
-          {{ "sendOrder" | translate }}
-        </button>
-      </div>
-    </div>
-  </ng-container>
-</div>

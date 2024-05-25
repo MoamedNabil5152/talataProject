@@ -126,10 +126,34 @@
 // .navContainer {
 //   margin-left: 62px;
 // }
+.login{
+  background-color: transparent;
+  border: 0;
+
+}
+.itemsLog{
+  color: #FD385D;
+  border: 2px solid #FD385D;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 15px;
+  margin-right: 32px;
+  padding: 4px;
+  border-radius: 10px;
+  font-family: "Almarai", sans-serif;
+  cursor: pointer;
+}
+.itemsLog:hover {
+  background-color: #FD385D;
+  color: #fff;
+}
+.log{
+  text-decoration: none;
+}
 .items {
   color: #726581;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 13px;
   margin-right: 32px;
   font-family: "Almarai", sans-serif;
   cursor: pointer;

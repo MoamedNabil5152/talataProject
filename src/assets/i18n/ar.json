@@ -67,10 +67,12 @@
 "sender_data": "Sender Data",
 "optional_weight": "Shipment Weight (Optional)",
 "mobile_number": "Mobile Number",
-"optional_dimensions": "Shipment Dimensions (Optional)",
+"optional_dimensions": "Number Of Shipments (Optional)",
 "optional_email": "Email (Optional)",
 "notes": "Notes (Optional)",
 "delivery_address": "Delivery Address",
+"Receiving _Address" : "Receiving Address",
+
 "sendOrder" : "Send Order",
 
 "privacy_policy": "Privacy Policy",
@@ -145,8 +147,10 @@
 "senderAdd" : "Sender delivery address is required",
 "reciever" : "Recipient full name is required",
 "recieverMob" : "Recipient mobile number is required",
-"recieverAdd" : "Recipient delivery address is required"
+"recieverAdd" : "Recipient delivery address is required",
+"login" : "Login"
 
 
 
 }
+     

@@ -66,10 +66,11 @@
   "sender_data": "بيانات المرسل",
   "optional_weight": "وزن الشحنة (اختياري)",
   "mobile_number": "رقم الموبايل",
-  "optional_dimensions": "ابعاد الشحنة (اختياري)",
+  "optional_dimensions": " عدد الشحنات (اختياري)",
   "optional_email": "الايميل (اختياري)",
   "notes": "ملاحظات (اختياري)",
-  "delivery_address": "عنوان الاستلام",
+  "delivery_address": "عنوان التسليم",
+  "Receiving _Address" : "عنوان الاستلام",
   "sendOrder" : "ارسال الطلب",
 
   "privacy_policy": "سياسة الخصوصية",
@@ -144,7 +145,8 @@
   "senderAdd" : "عنوان المرسل مطلوب",
   "reciever" : "اسم المرسل اليه مطلوب",
   "recieverMob" : "رقم هاتف المرسل اليه مطلوب",
-  "recieverAdd" : "عنوان المرسل اليه مطلوب"
+  "recieverAdd" : "عنوان المرسل اليه مطلوب",
+  "login":"تسجيل الدخول"
 
 }
 
